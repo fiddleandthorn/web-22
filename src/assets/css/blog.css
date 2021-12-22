@@ -1,0 +1,394 @@
+
+/* Blog Header
+================================================================================
+*/
+
+.blog-header {
+  padding: 6em 0 8em 0;
+  background-color: #fcf9f3;
+  position: relative;
+}
+
+.blog-header h1 {
+  font-size: 2.6875rem;
+  letter-spacing: -.02em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.blog-header .badge {
+  margin: 0 0 1rem 0;
+  font-size: 70%;
+}
+
+.blog-header .blog-header-intro-text {
+  font-size: 1.3125rem;
+  color: #666666;
+  margin-bottom: 0;
+}
+
+.blog-header .blog-header-content {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.blog-header .shape-bottom {
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  position: absolute;
+}
+
+.blog-header .shape-bottom svg {
+  transform: scale(2);
+  color: #fefdfb;
+}
+
+.blog-header .blog-categories .badge {
+  margin-right: 1em;
+}
+
+.blog-header .blog-categories .badge:last-of-type {
+  margin-right: 0;
+}
+
+
+
+
+/* Blog Content
+================================================================================
+*/
+
+.blog-body a {
+  color: #f1b725;
+  text-decoration: none;
+}
+
+.blog-body a:hover {
+  text-decoration: underline;
+}
+
+
+.blog-body .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-body .container .blog-content, .blog-body .container .blog-sidebar {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+.blog-body .container .blog-sidebar {
+  display: none;
+}
+
+.blog-sidebar .sidebar-card .card-body {
+  padding-top: 1.5rem;
+}
+
+.blog-sidebar .sidebar-card .card-body .h5 {
+  margin-top: 0;
+}
+
+.blog-sidebar .sidebar-card .card-body .text-muted {
+  font-size: 1rem;
+}
+
+.blog-sidebar .sidebar-card .card-body .title {
+  margin-bottom: 0.2rem;
+  margin-top: 2rem;
+}
+
+.blog-sidebar .sidebar-card .card-body a {
+  font-size: 1rem;
+}
+
+.blog-body .container .blog-featured-image {
+  width: 100%;
+  border-radius: .375rem;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.blog-body .container .blog-featured-image div {
+  border-radius: .375rem;
+}
+
+.blog-content b {
+  font-weight: normal;
+}
+
+.blog-content .blog-content-block {
+  margin-bottom: 3em;
+}
+
+.blog-list-block {
+  margin-bottom: 3em;
+  padding-left: 0;
+}
+
+.blog-list-block li {
+  list-style: none;
+  display: flex;
+  align-items: start;
+  margin-bottom: 1em;
+}
+
+.blog-list-block .badge {
+  margin-right: 1em;
+}
+
+.blog-list-block li p {
+  margin-top: 0;
+}
+
+.blog-list-block li p strong {
+  color: #161c2d;
+  font-weight: 400;
+}
+
+.blog-list-block li p {
+  color: #666666;
+}
+
+.blog-sidebar .h4 {
+  margin-top: 0;
+}
+
+.blog-sidebar .blog-sidebar-block-wrapper {
+  min-height: 50%;
+}
+
+.blog-sidebar .blog-list-block {
+  margin-bottom: 3em;
+}
+
+.blog-sidebar .blog-list-block a {
+  color: #161c2d;
+}
+
+.blog-sidebar .blog-sidebar-block {
+  position: sticky;
+  height: calc(100vh - 8rem);
+  top: 0;
+  padding-top: 4rem;
+}
+
+.blog-content .blog-image {
+  margin-bottom: 3rem;
+}
+
+.blog-content .blog-image .gatsby-image-wrapper {
+  width: 100%;
+  border-radius: .375rem;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.blog-content .blog-image span {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666666;
+}
+
+.blog-content .blog-location .gatsby-image-wrapper {
+  width: 100%;
+  border-radius: .375rem;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.blog-content .blog-location .blog-location-information {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-content .blog-location .blog-location-information .badge {
+  font-size: 1.1rem;
+  margin-right: 1rem;
+  margin-top: 0.55rem;
+}
+
+.blog-content .blog-location .blog-location-information .h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.blog-content .blog-location .blog-location-information p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.blog-content .blog-location .blog-location-information a {
+  color: #f1b725;
+  text-decoration: none;
+}
+
+.blog-content .blog-location .blog-location-information a:hover {
+  color: #f1b725;
+  text-decoration: underline;
+}
+
+.blog-content .blog-location .blog-location-information .blog-location-address {
+  display: flex;
+  color: #666666;
+}
+
+.blog-content .blog-location .blog-location-information .blog-location-address a {
+  margin-left: 1em;
+}
+
+.blog-content .blog-location .blog-content-block {
+  margin-bottom: 4rem;
+}
+
+.accordion-wrapper {
+  margin-bottom: 4rem;
+}
+
+/* Style the accordion section */
+.accordion__section {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0ded9;
+  overflow: hidden;
+  margin-top: -1px;
+}
+
+.accordion-wrapper>.accordion__section:first-of-type {
+  border: 1px solid #e0ded9;
+  border-top-right-radius: calc(.375rem - 0px);
+  border-top-left-radius: calc(.375rem - 0px);
+}
+
+.accordion-wrapper>.accordion__section:last-child {
+  border-bottom-right-radius: calc(.375rem - 0px);
+  border-bottom-left-radius: calc(.375rem - 0px);
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #fff;
+  cursor: pointer;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+  color:  #161c2d;
+}
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion:hover,
+.active {
+  background-color: #fff;
+}
+
+/* Style the accordion content title */
+.accordion__title {
+  font-size: 1rem;
+  font-family: "HKGroteskPro", sans-serif;
+  text-align: left;
+  line-height: 1.7rem;
+  margin: 0;
+}
+
+/* Style the accordion chevron icon */
+.accordion__icon {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Style to rotate icon when state is active */
+.rotate {
+  transform: rotate(90deg);
+}
+
+/* Style the accordion content panel. Note: hidden by default */
+.accordion__content {
+  background-color: white;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+/* Style the accordion content text */
+.accordion__text {
+  font-size: 0.9em;
+  padding: 0rem 1.25rem 1rem 1.25rem;
+  color: #57584a!important;
+}
+
+.chevron-section {
+  display: flex;
+  margin-left: auto;
+  font-family: "HKGroteskPro", sans-serif;
+  color: #57584a!important;
+  padding-left: 1rem;
+}
+
+.chevron-section p {
+  font-size: 0.9rem;
+  margin-right: 0.75rem;
+  display: none;
+}
+
+.accordion__text p {
+  margin-top: 0;
+}
+
+@media(min-width: 992px) {
+  .chevron-section {
+    padding-left: 3rem;
+  }
+
+  .chevron-section p {
+    white-space: nowrap;
+    display: block;
+  }
+}
+
+.blog-sharing {
+  display: flex;
+  align-items: center;
+}
+
+.blog-sharing .share-links {
+  margin-left: auto;
+}
+
+/* Responsive
+================================================================================
+*/
+
+@media (min-width: 768px) {
+  .blog-header .blog-header-content {
+    width: 72.5%;
+  }
+  .blog-body .container .blog-sidebar {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    padding-left: 3rem;
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .blog-body .container {
+    flex-direction: row;
+  }
+
+  .blog-body .container .blog-content {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+    margin-top: -3.5rem;
+  }
+}

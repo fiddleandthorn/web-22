@@ -1,0 +1,165 @@
+
+.plant-header {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.plant-header svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scale(2);
+}
+
+.plant-header .container {
+  z-index: 1000;
+  position: relative;
+  padding: 7rem 0;
+}
+
+.plant-header h1 {
+  margin-bottom: 0em;
+  color: #fff;
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+.plant-header h3 {
+  margin-top: 0.6rem;
+  margin-bottom: 0em;
+  font-family: "HKGroteskPro", sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.plant-header .gatsby-image-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+.plant-header .gatsby-image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.6;
+  background-color: black;
+}
+
+.plant-basic-care .intro-copy {
+  text-align: center!important;
+  padding: 4rem 20px 2rem 0;
+  margin: auto;
+}
+
+.plant-basic-care .intro-copy h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.plant-basic-care p, .plant-basic-care .basics p {
+  color: #666666;
+}
+
+.plant-basic-care .basics {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.plant-basic-care .basics svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.plant-basic-care .basics h4 {
+  margin-top: 0.5rem;
+}
+
+
+.plant-detailed-care .container.intro {
+  display: flex;
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 0;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}
+
+.plant-detailed-care .intro .third {
+  margin-left: auto;
+}
+
+.plant-detailed-care .plant-detail-block h4 {
+  margin-top: 1em;
+}
+
+.plant-detailed-care .plant-detail-blocks {
+  margin-top: 4rem;
+}
+
+.plant-common-problems {
+  margin: 4rem 0 0 0;
+}
+
+.plant-common-problems .intro {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.plant-common-problems .intro .third {
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.plant-common-problems h2 {
+  margin-top: 0;
+}
+
+.plant-common-problems .plant-dropdowns, .related-plants, .related-posts {
+  margin-top: 4rem;
+}
+
+
+@media (min-width: 768px) {
+  .plant-basic-care .intro-copy {
+    width: 72.5%;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .plant-detailed-care .container.intro {
+    flex-direction: row;
+  }
+
+  .plant-common-problems .intro .third {
+    margin-bottom: 0;
+  }
+  .plant-basic-care .intro-copy {
+    max-width: 700px;
+  }
+  .plant-detailed-care .plant-detail-block {
+    display: flex;
+  }
+  .plant-detailed-care .plant-detail-block h4 {
+    flex: 0 0 30%;
+  }
+  .plant-detailed-care .plant-detail-block div {
+    flex: 0 0 60%;
+    margin-left: auto;
+  }
+  .plant-common-problems .container {
+    display: flex;
+  }
+}
