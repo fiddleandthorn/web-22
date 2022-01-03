@@ -185,7 +185,7 @@ export const query = graphql`
         }
       }
     }
-    allWpPlant(filter: {plantCategories: {nodes: {elemMatch: {id: {eq: $id}}}}}, sort: {fields: plantData___plantName, order: DESC}) {
+    allWpPlant(filter: {plantCategories: {nodes: {elemMatch: {id: {eq: $id}}}}}, sort: {fields: plantData___plantName, order: ASC}) {
       nodes {
         uri
         plantData {

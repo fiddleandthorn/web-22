@@ -175,7 +175,7 @@ export const query = graphql`
         }
       }
     }
-    allWpPlant(sort: {fields: plantData___plantName, order: DESC}) {
+    allWpPlant(sort: {fields: plantData___plantName, order: ASC}) {
       nodes {
         uri
         plantData {

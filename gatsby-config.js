@@ -10,7 +10,20 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        url: "http://fiddle-thorn-gatsby.local/graphql",
+        production: {
+          hardCacheMediaFiles: true,
+        },
+        develop: {
+          hardCacheMediaFiles: true,
+          // hardCacheData: true,
+        },
+        url: "https://cms.fiddleandthorn.com/graphql",
+        schema: {
+          perPage: 20, // currently set to 100
+          requestConcurrency: 5, // currently set to 15
+          previewRequestConcurrency: 2, // currently set to 5
+          timeout: 10000000,
+        }
       },
     },
     {

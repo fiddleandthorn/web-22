@@ -110,7 +110,7 @@ const WpPostTemplate = ({ props, data }) => {
                 <p className="h4">You might also like...</p>
                 <hr />
                 <ul className="blog-list-block">
-                  {relatedPosts.slice(0, 1).map((post, index) => {
+                  {relatedPosts.slice(0, 5).map((post, index) => {
                     return (
                       <li>
                         <span className="badge">{index + 1}</span>
@@ -128,7 +128,7 @@ const WpPostTemplate = ({ props, data }) => {
                 <p className="h4">Others are reading...</p>
                 <hr />
                 <ul className="blog-list-block">
-                  {relatedPosts.slice(0, 1).map((post, index) => {
+                  {relatedPosts.slice(5, 10).map((post, index) => {
                     return (
                       <li>
                         <span className="badge">{index + 1}</span>
@@ -144,7 +144,7 @@ const WpPostTemplate = ({ props, data }) => {
           </div>
         </div>
         <div className="container related-posts-cards">
-            {relatedPosts.slice(2, 7).map((post, index) => {
+            {relatedPosts.slice(10, 19).map((post, index) => {
               var postImage = getImage(post.acfPostData.blogMainImage.localFile);
               return (
                 <div className="third">
@@ -380,6 +380,27 @@ export const query = graphql`
             id
             title
             uri
+            acfPostData {
+              blogMainImage {
+                localFile {
+                  childImageSharp {
+                    gatsbyImageData (
+                      width: 700
+                      aspectRatio: 1.333
+                      placeholder: DOMINANT_COLOR
+                      formats: [AUTO, WEBP, AVIF]
+                      quality: 50
+                    )
+                  }
+                }
+              }
+            }
+            categories {
+              nodes {
+                name
+                uri
+              }
+            }
           }
         }
       }
