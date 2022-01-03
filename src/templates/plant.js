@@ -382,6 +382,8 @@ export const query = graphql`
               id
               uri
               plantData {
+                plantLatinName
+                plantName
                 plantIconImage {
                   localFile {
                     childImageSharp {
@@ -395,8 +397,6 @@ export const query = graphql`
                     }
                   }
                 }
-                plantLatinName
-                plantName
               }
             }
           }
