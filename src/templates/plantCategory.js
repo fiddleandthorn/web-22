@@ -78,6 +78,7 @@ const PlantCategoryPage = ({ data, pageContext }) => {
 
 
       <div className="plant-header big-header">
+        <GatsbyImage image={headerImage} alt={data.wpPlantCategory.plantCategories.plantTitle} />
          <div className="container">
           <div className="full">
             <h1>{data.wpPlantCategory.plantCategories.plantTitle}</h1>

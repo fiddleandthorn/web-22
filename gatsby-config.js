@@ -33,7 +33,7 @@ module.exports = {
           short_name: 'FiddleandThorn',
           start_url: '/',
           background_color: '#fefdfb',
-          theme_color: '#f1b725',
+          theme_color: '#fefdfb',
           display: 'standalone',
           icon: 'src/images/icon.png',
       },

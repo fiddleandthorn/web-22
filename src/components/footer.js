@@ -54,9 +54,9 @@ const Footer = () => {
 
           <div className="fifth">
             <p className="title">Plants Index</p>
-            <a href="/plant-categories/low-light/">Low Light</a>
-            <a href="/plant-categories/low-effort/">Low Effort</a>
-            <a href="/plant-categories/most-popular/">Most Popular</a>
+            <a href="/plants/categories/low-light/">Low Light</a>
+            <a href="/plants/categories/low-effort/">Low Effort</a>
+            <a href="/plants/categories/most-popular/">Most Popular</a>
           </div>
 
           <div className="fifth">
