@@ -2,6 +2,7 @@ const path = require(`path`)
 const { slash } = require(`gatsby-core-utils`)
 const { paginate } = require("gatsby-awesome-pagination")
 
+const redirects = require("./redirects.json");
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -200,6 +201,17 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     }
   })
+
+  // CREATE REDIRECTS
+
+  const { createRedirect } = actions;
+
+	redirects.forEach(redirect =>
+		createRedirect({
+	    fromPath: redirect.fromPath,
+	    toPath: redirect.toPath,
+	  });
+	);
 
 
 }
