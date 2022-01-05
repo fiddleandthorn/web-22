@@ -19,6 +19,7 @@
     "gatsby": "^4.1.0",
     "gatsby-awesome-pagination": "^0.3.8",
     "gatsby-plugin-algolia": "^0.23.0",
+    "gatsby-plugin-client-side-redirect": "^1.1.0",
     "gatsby-plugin-gatsby-cloud": "^4.1.0",
     "gatsby-plugin-google-analytics": "^4.1.0",
     "gatsby-plugin-image": "^2.1.0",

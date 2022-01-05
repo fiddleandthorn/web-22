@@ -61,6 +61,7 @@ module.exports = {
     'gatsby-plugin-loadable-components-ssr',
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    `gatsby-plugin-client-side-redirect`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
