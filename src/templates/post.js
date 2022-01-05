@@ -14,7 +14,7 @@ const BlogList = loadable(() => import('../components/blog/list.js'));
 const BlogImage = loadable(() => import('../components/blog/image.js'));
 const BlogLocation = loadable(() => import('../components/blog/location.js'));
 const BlogPlant = loadable(() => import('../components/blog/plant.js'));
-const BlogAd = loadable(() => import('../components/blog/ad.js'));
+const BlogAd from '../components/blog/ad.js';
 const BlogAccordion = loadable(() => import('../components/blog/accordion.js'));
 
 
