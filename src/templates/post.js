@@ -9,7 +9,7 @@ import "../assets/css/blog.css"
 import Layout from '../components/layout.js';
 import ShareLinks from '../components/shareLinks.js';
 
-const BlogContent = loadable(() => import('../components/blog/content.js'));
+import BlogContent from '../components/blog/content.js';
 const BlogList = loadable(() => import('../components/blog/list.js'));
 const BlogImage = loadable(() => import('../components/blog/image.js'));
 const BlogLocation = loadable(() => import('../components/blog/location.js'));
