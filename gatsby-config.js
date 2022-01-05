@@ -3,7 +3,7 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://fiddleandthorn.com",
     title: "Fiddle & Thorn",
   },
   plugins: [
