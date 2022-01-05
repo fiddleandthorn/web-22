@@ -99,6 +99,10 @@
   margin-left: auto;
 }
 
+.plant-detailed-care a {
+  color: #f1b725;
+}
+
 .plant-detailed-care .plant-detail-block h4 {
   margin-top: 1em;
 }

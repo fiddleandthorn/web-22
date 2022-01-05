@@ -326,6 +326,10 @@
   color: #57584a!important;
 }
 
+.accordion__text a {
+  color: #f1b725;
+}
+
 .chevron-section {
   display: flex;
   margin-left: auto;
