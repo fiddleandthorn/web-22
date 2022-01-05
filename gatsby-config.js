@@ -56,6 +56,12 @@ module.exports = {
         trackingId: "UA-212198410-1",
       },
     },
+    {
+    resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-PBD43KP",
+      },
+    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     'gatsby-plugin-loadable-components-ssr',
