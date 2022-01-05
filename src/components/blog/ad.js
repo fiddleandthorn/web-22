@@ -10,6 +10,7 @@ const BlogAd = () => {
       format='auto'
       responsive='true'
       layoutKey='-gw-1+2a-9x+5c'
+      data-adtest="on"
     />
   )
 }
