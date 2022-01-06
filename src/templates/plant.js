@@ -175,7 +175,7 @@ const WpPlantTemplate = ({ data }) => {
 
             {plant.plantDetailContent.map((block, index) => {
 
-              if ((index + 1) % 3 === 0  ) {
+              if (index % 3 === 0  ) {
                 return (
                   <>
                     <hr />
