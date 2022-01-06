@@ -127,7 +127,7 @@ const WpPostTemplate = ({ props, data }) => {
                   slot='3678711086'
                   style={{ display: 'block' }}
                   format='auto'
-                  responsive='true'
+                  responsive='false'
                   layoutKey='-gw-1+2a-9x+5c'
                   data-adtest="on"
                 />
@@ -154,7 +154,7 @@ const WpPostTemplate = ({ props, data }) => {
                   slot='3678711086'
                   style={{ display: 'block' }}
                   format='auto'
-                  responsive='true'
+                  responsive='false'
                   layoutKey='-gw-1+2a-9x+5c'
                   data-adtest="on"
                 />
