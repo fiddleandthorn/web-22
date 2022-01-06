@@ -1,7 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import Helmet from "react-helmet"
+import Helmet from "react-helmet";
+import AdSense from 'react-adsense';
 
 import "../assets/css/plant.css"
 
@@ -172,10 +173,11 @@ const WpPlantTemplate = ({ data }) => {
         <div className="container plant-detail-blocks">
           <div className="full">
 
-            {plant.plantDetailContent.map((block) => {
+            {plant.plantDetailContent.map((block, index) => {
               return (
                 <>
                   <hr />
+                  {index}
                   <div className="plant-detail-block">
                     <h4>{block.plantDetailContentTitle}</h4>
                     <div dangerouslySetInnerHTML={{__html: block.plantDetailContentCopy}}/>
@@ -287,6 +289,22 @@ const WpPlantTemplate = ({ data }) => {
             </div>
           </div>
       }
+
+      <div className="ad">
+        <div className="container">
+          <div className="full">
+            <AdSense.Google
+              client='ca-pub-3791928853233682'
+              slot='6642185036'
+              style={{ display: 'block' }}
+              format='auto'
+              responsive='true'
+              layoutKey='-gw-1+2a-9x+5c'
+              data-adtest="on"
+            />
+          </div>
+        </div>
+      </div>
 
       <div className="affiliate-message">
         <div className="container">
