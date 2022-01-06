@@ -175,9 +175,14 @@ const WpPlantTemplate = ({ data }) => {
 
             {plant.plantDetailContent.map((block, index) => {
 
-              if (index % 3 === 0  ) {
+              if ((index + 1) % 3 === 0  ) {
                 return (
                   <>
+                    <hr />
+                    <div className="plant-detail-block">
+                      <h4>{block.plantDetailContentTitle}</h4>
+                      <div dangerouslySetInnerHTML={{__html: block.plantDetailContentCopy}}/>
+                    </div>
                     <hr />
                     <AdSense.Google
                       client='ca-pub-3791928853233682'
@@ -188,11 +193,6 @@ const WpPlantTemplate = ({ data }) => {
                       layoutKey='-gw-1+2a-9x+5c'
                       data-adtest="on"
                     />
-                    <hr />
-                    <div className="plant-detail-block">
-                      <h4>{block.plantDetailContentTitle}</h4>
-                      <div dangerouslySetInnerHTML={{__html: block.plantDetailContentCopy}}/>
-                    </div>
                   </>
                 )
               } else {
