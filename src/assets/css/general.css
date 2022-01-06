@@ -50,9 +50,9 @@ body {
     box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
-  body {
-    overflow: visible;
+@media (max-width: 768px) {
+  #gatsby-focus-wrapper {
+    overflow: hidden;
   }
 }
 
