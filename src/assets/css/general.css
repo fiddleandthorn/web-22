@@ -777,6 +777,10 @@ input:focus {
   transition: 0.3s 0.3s ease;
 }
 
+.navigation .menu .nav-link .dropdown .quarter {
+  margin-left: -1rem;
+}
+
 .nav-search, .nav-menu {
   position: relative;
   z-index: 125;
@@ -807,10 +811,14 @@ input:focus {
   padding: 3rem 20px;
 }
 
+.navigation .menu .dropdown .container .title {
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
 .navigation .menu .dropdown .container a {
   display: block;
-  padding: 0;
-  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
 }
 
 .navigation .menu .dropdown .container a:last-of-type {
