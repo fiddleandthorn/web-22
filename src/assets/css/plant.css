@@ -21,8 +21,14 @@
 .plant-header h1 {
   margin-bottom: 0em;
   color: #fff;
-  font-size: 3rem;
+  font-size: 2.4rem;
   margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .plant-header h1 {
+    font-size: 3rem;
+  }
 }
 
 .plant-header h3 {
