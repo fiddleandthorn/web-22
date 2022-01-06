@@ -113,6 +113,10 @@
   margin-bottom: 3rem;
 }
 
+.blog-body .container img {
+  border-radius: .375rem;
+}
+
 .blog-body .container .blog-featured-image div {
   border-radius: .375rem;
 }
