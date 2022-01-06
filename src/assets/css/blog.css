@@ -48,19 +48,8 @@
 .blog-header .blog-categories .badge {
   margin-right: 1em;
 }
-
 .blog-header .blog-categories .badge:last-of-type {
   margin-right: 0;
-}
-
-@media(min-width: 768px) {
-  .blog-categories.blog-sharing {
-    flex-wrap: wrap;
-  }
-  .blog-categories.blog-sharing .share-links {
-    margin-left: 0;
-    margin-top: 0.5rem;
-  }
 }
 
 
@@ -374,11 +363,19 @@
 
 .blog-sharing {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
-
 .blog-sharing .share-links {
-  margin-left: auto;
+  margin-left: 0;
+  margin-top: 0.5rem;
+}
+
+@media(min-width: 768px) {
+  .blog-sharing .share-links {
+    margin-left: auto;
+    margin-top: 0rem;
+  }
 }
 
 /* Responsive
