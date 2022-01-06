@@ -149,7 +149,12 @@
   margin-right: 1em;
 }
 
-.blog-list-block li p {
+.blog-list-block li p,
+.blog-list-block li h1,
+.blog-list-block li h2,
+.blog-list-block li h3,
+.blog-list-block li h4,
+.blog-list-block li h5  {
   margin-top: 0;
 }
 
