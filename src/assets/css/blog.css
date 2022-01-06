@@ -368,7 +368,10 @@
 }
 .blog-sharing .share-links {
   margin-left: 0;
-  margin-top: 0.5rem;
+  width: 100%;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid #e0ded9;
 }
 
 @media(min-width: 768px) {
