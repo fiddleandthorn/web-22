@@ -16,6 +16,12 @@
   margin: 0;
 }
 
+@media (min-width: 768px) {
+  .blog-header h1 {
+    font-size: 2.4rem;
+  }
+}
+
 .blog-header .badge {
   margin: 0 0 1rem 0;
   font-size: 70%;
