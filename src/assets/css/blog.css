@@ -378,6 +378,9 @@
   .blog-sharing .share-links {
     margin-left: auto;
     margin-top: 0rem;
+    padding-top: 0;
+    width: auto;
+    border-top: 0px;
   }
 }
 
