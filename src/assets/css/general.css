@@ -28,7 +28,7 @@ main {
 
 body {
   margin: 0;
-  overflow-x: hidden;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "HKGroteskPro", sans-serif;
@@ -48,6 +48,12 @@ body {
 
 *, ::after, ::before {
     box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  body {
+    overflow: visible;
+  }
 }
 
 
