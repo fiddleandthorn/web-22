@@ -38,17 +38,17 @@ const Header = () => {
                   <div className="container">
                     <div className="quarter">
                       <p className="title">Categories</p>
-                      <a href="#">Low Light</a>
-                      <a href="#">Low Effort</a>
-                      <a href="#">Pet Friendly</a>
-                      <a href="#">Office Friendly</a>
+                      <a href="/plants/categories/low-light">Low Light</a>
+                      <a href="/plants/categories/low-effort">Low Effort</a>
+                      <a href="/plants/categories/pet-friendly">Pet Friendly</a>
+                      <a href="/plants/categories/office-friendly">Office Friendly</a>
                     </div>
                     <div className="quarter">
                       <p className="title">Most Popular</p>
-                      <a href="#">Monstera</a>
-                      <a href="#">Fiddle Leaf Fig</a>
-                      <a href="#">Pilea</a>
-                      <a href="#">Rubber Plant</a>
+                      <a href="/plants/swiss-cheese-plant/">Monstera</a>
+                      <a href="/plants/fiddle-leaf-fig/">Fiddle Leaf Fig</a>
+                      <a href="/plants/chinese-money-plant/">Pilea</a>
+                      <a href="/plants/rubber-plant/">Rubber Plant</a>
                     </div>
                   </div>
                 </div>
@@ -59,10 +59,10 @@ const Header = () => {
                   <div className="container">
                     <div className="quarter">
                       <p className="title">Categories</p>
-                      <a href="#">Plant Issues</a>
-                      <a href="#">Propagation</a>
-                      <a href="#">How-To</a>
-                      <a href="#">Recommendations</a>
+                      <a href="/journal/problems">Plant Issues</a>
+                      <a href="/journal/propagation">Propagation</a>
+                      <a href="/journal/how-to">How-To</a>
+                      <a href="/journal/recommendations">Recommendations</a>
                     </div>
                   </div>
                 </div>
@@ -108,17 +108,17 @@ const Header = () => {
                 <div className="nav-submenu">
                   <div className="half">
                     <p className="title">Categories</p>
-                    <a href="#">Low Light</a>
-                    <a href="#">Low Effort</a>
-                    <a href="#">Pet Friendly</a>
-                    <a href="#">Office Friendly</a>
+                    <a href="/plants/categories/low-light">Low Light</a>
+                    <a href="/plants/categories/low-effort">Low Effort</a>
+                    <a href="/plants/categories/pet-friendly">Pet Friendly</a>
+                    <a href="/plants/categories/office-friendly">Office Friendly</a>
                   </div>
                   <div className="half">
                     <p className="title">Most Popular</p>
-                    <a href="#">Monstera</a>
-                    <a href="#">Fiddle Leaf Fig</a>
-                    <a href="#">Pilea</a>
-                    <a href="#">Rubber Plant</a>
+                    <a href="/plants/swiss-cheese-plant/">Monstera</a>
+                    <a href="/plants/fiddle-leaf-fig/">Fiddle Leaf Fig</a>
+                    <a href="/plants/chinese-money-plant/">Pilea</a>
+                    <a href="/plants/rubber-plant/">Rubber Plant</a>
                   </div>
                 </div>
                 <hr />
@@ -128,10 +128,10 @@ const Header = () => {
                 <div className="nav-submenu">
                   <div className="half">
                     <p className="title">Categories</p>
-                    <a href="#">Plant Issues</a>
-                    <a href="#">Propagation</a>
-                    <a href="#">How-To</a>
-                    <a href="#">Recommendations</a>
+                    <a href="/journal/problems">Plant Issues</a>
+                    <a href="/journal/propagation">Propagation</a>
+                    <a href="/journal/how-to">How-To</a>
+                    <a href="/journal/recommendations">Recommendations</a>
                   </div>
                 </div>
                 <hr />
