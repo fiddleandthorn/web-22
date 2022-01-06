@@ -53,6 +53,15 @@
   margin-right: 0;
 }
 
+@media(min-width: 768px) {
+  .blog-categories.blog-sharing {
+    flex-wrap: wrap;
+  }
+  .blog-categories.blog-sharing .share-links {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
 
 
 
