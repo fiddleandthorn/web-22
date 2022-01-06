@@ -28,7 +28,7 @@ main {
 
 body {
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "HKGroteskPro", sans-serif;
