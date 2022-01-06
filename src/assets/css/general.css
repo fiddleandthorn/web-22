@@ -916,16 +916,19 @@ input:focus {
 
 .category-navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 1.5rem;
 }
 
 .category-navigation .badge {
   margin: 0 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .category-navigation .badge-light {
   margin: 0 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 
