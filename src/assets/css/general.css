@@ -302,6 +302,14 @@ hr {
   margin: auto;
 }
 
+.big-header.error h1, .big-header.error h3  {
+  color: #161c2d;
+}
+
+.big-header.error a  {
+  margin-top: 2rem;
+}
+
 
 /* Related Posts
 ================================================================================
@@ -1287,4 +1295,62 @@ input:focus {
 
 .popular-posts {
   padding-top: 3rem;
+}
+
+/* Subscribe Modal
+================================================================================
+*/
+
+.subscribe-modal {
+  display: none;
+}
+
+.subscribe-modal.open {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+}
+
+.subscribe-modal .close-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+}
+
+.subscribe-modal .container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.subscribe-modal .card {
+  background-color: #fcf9f3;
+}
+
+.subscribe-modal .card .card-body {
+  padding: 1rem 3rem 2.5rem 3rem;
+}
+
+.subscribe-modal #mc_embed_signup {
+  margin: 2rem 0 0 0;
+}
+
+.subscribe-modal .button {
+  margin: 1rem 0;
+}
+
+.subscribe-modal input {
+  text-align: center;
 }

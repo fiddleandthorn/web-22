@@ -9,17 +9,18 @@ import "../assets/css/blog.css"
 
 import Layout from '../components/layout.js';
 
+
 const ErrorTemplate = ({ props }) => {
   return (
     <Layout>
       <Helmet>
-        <title>404 | Fiddle & Thorn</title>
+        <title>Store | Coming Soon | Fiddle & Thorn</title>
       </Helmet>
       <div className="plant-header big-header error">
         <div className="container">
           <div className="full">
-            <h1>404</h1>
-            <h3>Oops, looks like we've messed something up here!</h3>
+            <h1>Store Coming Soon!</h1>
+            <h3>We're still working on getting our store ready and online! It'll be back soon!</h3>
             <a href="/" className="button">Go Home</a>
           </div>
         </div>

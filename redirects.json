@@ -142,5 +142,13 @@
   {
     "fromPath": "/a/perlite-mix",
     "toPath": "https://geni.us/arQB"
+  },
+  {
+    "fromPath": "/shop",
+    "toPath": "/store"
+  },
+  {
+    "fromPath": "/product/general-care-ebook/",
+    "toPath": "/store"
   }
 ]

@@ -8,14 +8,16 @@ import AdSense from 'react-adsense';
 import "../assets/css/blog.css"
 
 import Layout from '../components/layout.js';
+import SubscribeModal from '../components/subscribe-modal.js';
 import ShareLinks from '../components/shareLinks.js';
 
 import BlogContent from '../components/blog/content.js';
+import BlogAd from '../components/blog/ad.js';
+
 const BlogList = loadable(() => import('../components/blog/list.js'));
 const BlogImage = loadable(() => import('../components/blog/image.js'));
 const BlogLocation = loadable(() => import('../components/blog/location.js'));
 const BlogPlant = loadable(() => import('../components/blog/plant.js'));
-import BlogAd from '../components/blog/ad.js';
 const BlogAccordion = loadable(() => import('../components/blog/accordion.js'));
 
 
@@ -65,6 +67,8 @@ const WpPostTemplate = ({ props, data }) => {
         <meta name="twitter:description" content={acfData.blogShortDescription} />
         <meta name="twitter:image" content={acfData.blogMainImage.sourceUrl} />
       </Helmet>
+
+      <SubscribeModal />
 
       <div className="blog-header">
         <div className="container">

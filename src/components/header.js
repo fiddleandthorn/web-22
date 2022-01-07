@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Helmet from "react-helmet"
 
 import { withPrefix, useStaticQuery, graphql } from "gatsby"
@@ -68,7 +68,7 @@ const Header = () => {
                 </div>
               </li>
               <li className="nav-link">
-                <a href="https://store.fiddleandthorn.com/">Store</a>
+                <a href="/store">Store</a>
               </li>
               <li className="nav-search">
                 <a href="#" className="search-toggle" aria-label="Search" onClick={toggleSearch}>
@@ -137,7 +137,7 @@ const Header = () => {
                 <hr />
               </li>
               <li className="nav-link">
-                <a href="https://store.fiddleandthorn.com/">Store</a>
+                <a href="/store">Store</a>
                 <hr />
               </li>
             </ul>
