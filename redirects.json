@@ -150,5 +150,25 @@
   {
     "fromPath": "/product/general-care-ebook/",
     "toPath": "/store"
+  },
+  {
+    "fromPath": "/plant-categories/pet-friendly/",
+    "toPath": "/plants/categories/pet-friendly/"
+  },
+  {
+    "fromPath": "/plant-categories/low-effort/",
+    "toPath": "/plants/categories/low-effort/"
+  },
+  {
+    "fromPath": "/plant-categories/most-popular/",
+    "toPath": "/plants/categories/most-popular/"
+  },
+  {
+    "fromPath": "/plant-categories/office-friendly/",
+    "toPath": "/plants/categories/office-friendly/"
+  },
+  {
+    "fromPath": "/plant-categories/low-light/",
+    "toPath": "/plants/categories/low-light/"
   }
 ]
