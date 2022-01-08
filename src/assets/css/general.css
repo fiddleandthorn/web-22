@@ -325,6 +325,13 @@ hr {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
+  .related-posts-cards .card .text-muted {
+    display: none;
+  }
+
+}
+
 
 /* Related Posts
 ================================================================================
@@ -1027,7 +1034,8 @@ input:focus {
 }
 
 .category-spotlight {
-  overflow-y: visible;
+  overflow: hidden;
+  padding-bottom: 2rem;
 }
 
 /* Email Subscribe
@@ -1308,7 +1316,7 @@ input:focus {
 }
 
 .popular-posts {
-  padding-top: 3rem;
+  padding-top: 1rem;
 }
 
 /* Subscribe Modal

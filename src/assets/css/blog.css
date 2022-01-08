@@ -7,6 +7,7 @@
   padding: 6em 0 8em 0;
   background-color: #fcf9f3;
   position: relative;
+  overflow: hidden;
 }
 
 .blog-header h1 {
@@ -339,11 +340,12 @@
 .accordion__icon {
   margin-left: auto;
   transition: transform 0.3s ease;
+  transform: rotate(90deg);
 }
 
 /* Style to rotate icon when state is active */
 .rotate {
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
 }
 
 /* Style the accordion content panel. Note: hidden by default */
@@ -365,7 +367,7 @@
 }
 
 .chevron-section {
-  display: flex;
+  display: block;
   margin-left: auto;
   font-family: "HKGroteskPro", sans-serif;
   color: #57584a!important;
@@ -384,6 +386,7 @@
 
 @media(min-width: 992px) {
   .chevron-section {
+    display: flex;
     padding-left: 3rem;
   }
 
