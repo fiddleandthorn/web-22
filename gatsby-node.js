@@ -195,7 +195,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const pageTemplate = path.resolve(`./src/templates/page.js`)
 
-  const excludeURIs = ['/plants/', '/journal/']
+  const excludeURIs = ['/plants/', '/journal/', '/homepage/']
 
   allPages.forEach(page => {
     if (!excludeURIs.includes(page.uri)) {
