@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Helmet from "react-helmet"
+import CookieConsent from "react-cookie-consent";
 
 import { withPrefix, useStaticQuery, graphql } from "gatsby"
 
@@ -25,6 +26,20 @@ const Header = () => {
 
   return (
     <>
+      <CookieConsent
+      enableDeclineButton
+      disableStyles
+      location="bottom"
+      buttonText="Accept"
+      declineButtonText="Reject"
+      buttonClasses="button"
+      declineButtonClasses="button-light"
+      buttonWrapperClasses="buttons"
+      cookieName="myAwesomeCookieName2"
+      expires={150}
+      >
+        We use our own and third-party cookies to personalize content and to analyze web traffic. <a href="/policies">Read more about cookies</a>
+      </CookieConsent>
       <div className="navigation">
         <div className="container">
           <div className="full">

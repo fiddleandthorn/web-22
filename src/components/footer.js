@@ -1,6 +1,5 @@
 import React from 'react';
 import { useStaticQuery, graphql } from "gatsby"
-import CookieConsent from "react-cookie-consent";
 
 const Footer = () => {
 
@@ -85,21 +84,6 @@ const Footer = () => {
       </div>
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     </div>
-
-    <CookieConsent
-    enableDeclineButton
-    disableStyles
-    location="bottom"
-    buttonText="Accept"
-    declineButtonText="Reject"
-    buttonClasses="button"
-    declineButtonClasses="button-light"
-    buttonWrapperClasses="buttons"
-    cookieName="myAwesomeCookieName2"
-    expires={150}
-    >
-    We use our own and third-party cookies to personalize content and to analyze web traffic. <a href="/policies">Read more about cookies</a>
-  </CookieConsent>
   </>
   )
 }
