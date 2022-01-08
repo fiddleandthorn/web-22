@@ -67,8 +67,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.example.com',
-        sitemap: 'https://www.example.com/sitemap.xml',
+        host: 'https://fiddleandthorn.com',
+        sitemap: 'https://fiddleandthorn.com/sitemap/sitemap-0.xml',
         policy: [{ userAgent: '*', disallow: '/' }]
       }
     },
