@@ -53,7 +53,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "UA-212198410-1",
+        trackingId: "UA-152101441-2",
       },
     },
     {
@@ -69,7 +69,7 @@ module.exports = {
       options: {
         host: 'https://fiddleandthorn.com',
         sitemap: 'https://fiddleandthorn.com/sitemap/sitemap-0.xml',
-        policy: [{ userAgent: '*', disallow: '/' }]
+        policy: [{ userAgent: '*' }]
       }
     },
     'gatsby-plugin-loadable-components-ssr',
