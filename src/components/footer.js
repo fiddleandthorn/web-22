@@ -1,9 +1,11 @@
 import React from 'react';
 import { useStaticQuery, graphql } from "gatsby"
+import CookieConsent from "react-cookie-consent";
 
 const Footer = () => {
 
   return (
+    <>
     <div class="footer">
       <svg class="shape" viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path></svg>
       <div className="sub-footer">
@@ -84,6 +86,21 @@ const Footer = () => {
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     </div>
 
+    <CookieConsent
+    enableDeclineButton
+    disableStyles
+    location="bottom"
+    buttonText="Accept"
+    declineButtonText="Reject"
+    buttonClasses="button"
+    declineButtonClasses="button-light"
+    buttonWrapperClasses="buttons"
+    cookieName="myAwesomeCookieName2"
+    expires={150}
+    >
+    We use our own and third-party cookies to personalize content and to analyze web traffic. <a href="/policies">Read more about cookies</a>
+  </CookieConsent>
+  </>
   )
 }
 

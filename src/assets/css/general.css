@@ -1238,6 +1238,20 @@ input:focus {
   margin-top: 2rem;
 }
 
+.intro-cards .third {
+  margin-bottom: 2rem;
+}
+
+.intro-cards .third:last-of-type {
+  margin-bottom: 0rem;
+}
+
+@media (min-width: 992px) {
+  .intro-cards .third {
+    margin-bottom: 0rem;
+  }
+}
+
 .arrow-link {
   color: #f1b725;
   text-decoration: none;
@@ -1353,4 +1367,54 @@ input:focus {
 
 .subscribe-modal input {
   text-align: center;
+}
+
+.CookieConsent {
+  background-color: #fff!important;
+  border: 1px solid #e0ded9 !important;
+  position: fixed;
+  bottom: 0;
+  min-width: 275px;
+  max-width: 375px;
+  z-index: 2147483645;
+  box-sizing: border-box;
+  margin: 10px 10px;
+  padding: 20px 20px;
+  border-radius: 20px;
+  font-size: .9em;
+}
+
+.CookieConsent a {
+  color: rgb(22, 28, 45);
+}
+
+.CookieConsent .buttons {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.CookieConsent .button {
+  width: auto;
+  margin-right: 1rem;
+  width: -webkit-fill-available;
+  font-size: .8em;
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+.CookieConsent .button-light {
+  background-color: #E8E8E8;
+  color: #636363;
+  font-size: .8em;
+  border: 0;
+  border: 0;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .CookieConsent {
+    max-width: 100%;
+  }
 }

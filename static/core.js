@@ -1,5 +1,7 @@
-var el = document.querySelector('.search-toggle');
-el.onclick = function() {
-  var search = document.querySelector('#search');
-  search.classList.toggle('open');
-}
+
+    glowCookies.start('en', {
+        style: 1,
+        analytics: 'G-FH87DE17XF',
+        facebookPixel: '990955817632355',
+        policyLink: 'https://link-to-your-policy.com'
+    });

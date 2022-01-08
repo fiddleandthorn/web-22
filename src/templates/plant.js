@@ -10,6 +10,7 @@ import Layout from '../components/layout.js';
 import PlantHeader from '../components/plant/header.js';
 import Lines from '../components/lines.js';
 import PlantAccordion from '../components/plant/accordion.js';
+import SubscribeModal from '../components/subscribe-modal.js';
 
 const WpPlantTemplate = ({ data }) => {
 
@@ -125,6 +126,8 @@ const WpPlantTemplate = ({ data }) => {
         <meta name="twitter:description" content={"How to best care for your " + plant.plantName + ". Learn all about " + plant.plantName + " basic care, propagation, repotting, and any common issues you might run into."} />
         <meta name="twitter:image" content={plant.plantIconImage.sourceUrl} />
       </Helmet>
+
+      <SubscribeModal />
 
       <PlantHeader name={plant.plantName} latinName={plant.plantLatinName} image={headerImage} />
 
