@@ -51,9 +51,11 @@ module.exports = {
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingId: "UA-152101441-2",
+        trackingIds: [
+          "UA-152101441-2"
+        ]
       },
     },
     {
