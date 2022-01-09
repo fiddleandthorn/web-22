@@ -6,6 +6,14 @@ const SubscribeModal = () => {
 
   function toggleModal() {
     setVisibleState(setVisible === "" ? "open" : "");
+
+    if (setVisible === "open") {
+      window.gtag('event', 'Email Popup Open', {
+        'event_category': 'Email Popup Open',
+        'event_label': 'Email Popup Open'
+      });
+    }
+
   }
 
   useEffect(() => {
