@@ -170,5 +170,9 @@
   {
     "fromPath": "/plant-categories/low-light/",
     "toPath": "/plants/categories/low-light/"
+  },
+  {
+    "fromPath": "/burros-tail-turning-brown-reasons-and-how-to-fit-it/",
+    "toPath": "/burros-tail-turning-brown-reasons-and-how-to-fix-it/"
   }
 ]
