@@ -17,6 +17,11 @@
   margin: 0;
 }
 
+.blog-header .hidden {
+  display: none;
+  opacity: 0;
+}
+
 @media (min-width: 768px) {
   .blog-header h1 {
     font-size: 2.4rem;

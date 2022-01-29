@@ -29,6 +29,8 @@ const WpPostTemplate = ({ props, data }) => {
   const featuredImage = getImage(acfData.blogMainImage.localFile)
   const flexibleContent = acfData.contentBuilder
 
+  const publishDate = wpPost.date.split('T')[0];
+
   var locationCounter = 0;
   var plantCounter = 0;
   var adCounter = 0;
@@ -84,6 +86,7 @@ const WpPostTemplate = ({ props, data }) => {
             </div>
             <h1>{wpPost.title}</h1>
             <p className="blog-header-intro-text">{acfData.blogShortDescription}</p>
+            <p className="hidden">{publishDate}</p>
           </div>
         </div>
         <div className="shape-bottom">
@@ -282,6 +285,7 @@ export const query = graphql`
       title
       uri
       slug
+      date
       acfPostData {
         blogShortDescription
         blogMainImage {
