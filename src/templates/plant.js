@@ -221,7 +221,7 @@ const WpPlantTemplate = ({ data }) => {
             <GatsbyImage className={"clip_" + clipTwo} image={secondImage} alt={plant.plantName} />
           </div>
           <div className="half">
-            <h2>Common Problems with your <span className="text-yellow">{plant.plantName}</span></h2>
+            <h3 class="h2">Common Problems with your <span className="text-yellow">{plant.plantName}</span></h3>
             <p className="text-muted">Here are some common issues that you might run into. It's important to diagnose any issues early to give your plant the best chance of bouncing back.</p>
           </div>
         </div>
@@ -240,7 +240,7 @@ const WpPlantTemplate = ({ data }) => {
           <div className="related-posts">
             <div className="container">
               <div className="half">
-                <h2>Recent journal entries</h2>
+                <h3 class="h2">Recent journal entries</h3>
                 <p className="text-muted">Here are some of our recent journal entries that we think you might like.</p>
               </div>
               <div className="half">
@@ -286,7 +286,7 @@ const WpPlantTemplate = ({ data }) => {
           <div className="related-plants">
             <div className="container">
               <div className="half">
-                <h2>Related Plants</h2>
+                <h3 class="h2">Related Plants</h3>
                 <p className="text-muted">Here are some other plants that will work in similar conditions, or have some matching qualities.</p>
               </div>
               <div className="half">
