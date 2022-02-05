@@ -99,7 +99,7 @@ const WpPostTemplate = ({ props, data }) => {
         <div className="container">
           <div className="blog-content">
             <GatsbyImage className="blog-featured-image" image={featuredImage} alt={wpPost.title} />
-            <PostFlexibleContent content={flexibleContent} locationCounter={locationCounter} plantCounter={plantCounter} adCounter={adCounter} />
+            <PostFlexibleContent content={flexibleContent} locationCounter={locationCounter} plantCounter={plantCounter} adCounter={adCounter} adsDisabled={adsDisabled} />
             <hr />
             <div className="blog-categories blog-sharing">
               {wpPost.categories.nodes.map(category => {
@@ -220,7 +220,7 @@ const WpPostTemplate = ({ props, data }) => {
 };
 
 
-const PostFlexibleContent = ({ content, locationCounter, plantCounter, adCounter }) => {
+const PostFlexibleContent = ({ content, locationCounter, plantCounter, adCounter, adsDisabled }) => {
   return (
     <>
       {content.map(block => {
