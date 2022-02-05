@@ -344,6 +344,10 @@ const WpPlantTemplate = ({ data }) => {
         </div>
       </div>
 
+      {!adsDisabled &&
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      }
+
     </Layout>
   );
 };

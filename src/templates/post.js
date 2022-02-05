@@ -25,6 +25,7 @@ const WpPostTemplate = ({ props, data }) => {
 
   const wpPost = data.wpPost
   const acfData = wpPost.acfPostData
+  const adsDisabled = acfData.adsDisabled
 
   const featuredImage = getImage(acfData.blogMainImage.localFile)
   const flexibleContent = acfData.contentBuilder
@@ -129,12 +130,14 @@ const WpPostTemplate = ({ props, data }) => {
                     )
                   })}
                 </ul>
-                <AdSense.Google
-                  client='ca-pub-7292810486004926'
-                  slot='3678711086'
-                  style={{ width: 250, height: 250, float: 'left' }}
-                  format=''
-                />
+                {!adsDisabled &&
+                  <AdSense.Google
+                    client='ca-pub-7292810486004926'
+                    slot='3678711086'
+                    style={{ width: 250, height: 250, float: 'left' }}
+                    format=''
+                  />
+                }
               </div>
             </div>
             <div className="blog-sidebar-block-wrapper">
@@ -153,12 +156,14 @@ const WpPostTemplate = ({ props, data }) => {
                     )
                   })}
                 </ul>
-                <AdSense.Google
-                  client='ca-pub-7292810486004926'
-                  slot='3678711086'
-                  style={{ width: 250, height: 250, float: 'left' }}
-                  format=''
-                />
+                {!adsDisabled &&
+                  <AdSense.Google
+                    client='ca-pub-7292810486004926'
+                    slot='3678711086'
+                    style={{ width: 250, height: 250, float: 'left' }}
+                    format=''
+                  />
+                }
               </div>
             </div>
           </div>
@@ -205,10 +210,8 @@ const WpPostTemplate = ({ props, data }) => {
       </div>
 
 
-
-
-      {adCounter > 0 &&
-        <script defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      {!adsDisabled &&
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       }
 
 
@@ -254,7 +257,7 @@ const PostFlexibleContent = ({ content, locationCounter, plantCounter, adCounter
           )
         }
 
-        if (block.fieldGroupName === "Post_Acfpostdata_ContentBuilder_Ad") {
+        if (block.fieldGroupName === "Post_Acfpostdata_ContentBuilder_Ad" && !adsDisabled) {
           adCounter += 1
           return (
             <BlogAd />
@@ -287,6 +290,7 @@ export const query = graphql`
       slug
       date
       acfPostData {
+        adsDisabled
         blogShortDescription
         blogMainImage {
           sourceUrl
