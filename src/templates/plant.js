@@ -15,6 +15,7 @@ import SubscribeModal from '../components/subscribe-modal.js';
 const WpPlantTemplate = ({ data }) => {
 
   const plant = data.wpPlant.plantData
+  const adsDisabled = data.wpPlant.plantData.adsDisabled
   const headerImage = getImage(plant.plantMainImage.localFile)
 
   const iconImage = getImage(plant.plantIconImage.localFile)
@@ -178,7 +179,7 @@ const WpPlantTemplate = ({ data }) => {
 
             {plant.plantDetailContent.map((block, index) => {
 
-              if ((index + 1) % 3 === 0  ) {
+              if ((index + 1) % 3 === 0 && !adsDisabled ) {
                 return (
                   <>
                     <hr />
@@ -315,21 +316,23 @@ const WpPlantTemplate = ({ data }) => {
           </div>
       }
 
-      <div className="ad">
-        <div className="container">
-          <div className="full">
-            <AdSense.Google
-              client='ca-pub-3791928853233682'
-              slot='6642185036'
-              style={{ display: 'block' }}
-              format='auto'
-              responsive='true'
-              layoutKey='-gw-1+2a-9x+5c'
-              data-adtest="on"
-            />
+      {!adsDisabled &&
+        <div className="ad">
+          <div className="container">
+            <div className="full">
+              <AdSense.Google
+                client='ca-pub-3791928853233682'
+                slot='6642185036'
+                style={{ display: 'block' }}
+                format='auto'
+                responsive='true'
+                layoutKey='-gw-1+2a-9x+5c'
+                data-adtest="on"
+              />
+            </div>
           </div>
         </div>
-      </div>
+      }
 
       <div className="affiliate-message">
         <div className="container">
@@ -363,6 +366,7 @@ export const query = graphql`
       title
       uri
       plantData {
+        adsDisabled
         plantName
         plantLatinName
         plantIntroCopy
