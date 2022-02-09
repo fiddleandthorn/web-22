@@ -236,6 +236,50 @@ const WpPlantTemplate = ({ data }) => {
       </div>
       <Lines flipped={true} />
 
+      <div className="plant-simple-table">
+        <div className="container plant-dropdowns">
+          <div className="half">
+            <h3 class="h2">Simple <span className="text-yellow">{plant.plantName}</span> Care Requirements</h3>
+            <p className="text-muted">It sometimes helps to take caring for your plants back to the basics, here's the key considerations that you should take into account when caring for your {plant.plantLatinName}.</p>
+            <p className="text-muted">These simple points should give you all you need to keep your plant happy and healthy for years to come.</p>
+
+          </div>
+          <div className="half">
+          <figure class="simple-table">
+            <table>
+              <tbody>
+              <tr>
+                <td><strong>Common Name</strong></td>
+                <td>{plant.plantName}</td>
+              </tr>
+              <tr>
+                <td><strong>Latin Name</strong></td>
+                <td>{plant.plantLatinName}</td>
+              </tr>
+              <tr>
+                <td><strong>Lighting Requirements</strong></td>
+                <td>{plantBasics[0]['options'][plant.plantLightRating - 1]['title']}</td>
+              </tr>
+              <tr>
+                <td><strong>Watering Requirements</strong></td>
+                <td>{plantBasics[1]['options'][plant.plantWaterRating - 1]['title']}</td>
+              </tr>
+              <tr>
+                <td><strong>Humidity Requirements</strong></td>
+                <td>{plantBasics[2]['options'][plant.plantHumidityRating - 1]['title']}</td>
+              </tr>
+              <tr>
+                <td><strong>Soil Type</strong></td>
+                <td>{plantBasics[3]['options'][plant.plantSoilRating - 1]['title']}</td>
+              </tr>
+              </tbody>
+            </table>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <Lines flipped={true} />
+
       {plant.plantRelatedPosts !== null &&
         <>
           <div className="related-posts">
