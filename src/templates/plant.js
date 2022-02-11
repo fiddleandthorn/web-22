@@ -257,15 +257,15 @@ const WpPlantTemplate = ({ data }) => {
                 <td>{plant.plantLatinName}</td>
               </tr>
               <tr>
-                <td><strong>Lighting Requirements</strong></td>
+                <td><strong>Light</strong></td>
                 <td>{plantBasics[0]['options'][plant.plantLightRating - 1]['title']}</td>
               </tr>
               <tr>
-                <td><strong>Watering Requirements</strong></td>
+                <td><strong>Water</strong></td>
                 <td>{plantBasics[1]['options'][plant.plantWaterRating - 1]['title']}</td>
               </tr>
               <tr>
-                <td><strong>Humidity Requirements</strong></td>
+                <td><strong>Humidity</strong></td>
                 <td>{plantBasics[2]['options'][plant.plantHumidityRating - 1]['title']}</td>
               </tr>
               <tr>
