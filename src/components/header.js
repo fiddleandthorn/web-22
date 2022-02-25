@@ -40,6 +40,11 @@ const Header = () => {
       >
         We use our own and third-party cookies to personalize content and to analyze web traffic. <a href="/policies">Read more about cookies</a>
       </CookieConsent>
+
+      <Helmet>
+        <meta name="google-site-verification" content="pGBdQUVfDpZctg_VGmAj61_OainSeGWYo5WoOZ_CRv0" />
+      </Helmet>
+
       <div className="navigation">
         <div className="container">
           <div className="full">
