@@ -100,6 +100,24 @@ const WpPostTemplate = ({ props, data }) => {
           <div className="blog-content">
             <GatsbyImage className="blog-featured-image" image={featuredImage} alt={wpPost.title} />
             <PostFlexibleContent content={flexibleContent} locationCounter={locationCounter} plantCounter={plantCounter} adCounter={adCounter} adsDisabled={adsDisabled} />
+
+            <div className="blog-sidebar-block-wrapper">
+              <div className="blog-sidebar-block">
+                <p className="h4">We think you'll like these!</p>
+                <ul className="blog-list-block">
+                  {relatedPosts.slice(0, 5).map((post, index) => {
+                    return (
+                      <li>
+                        <span className="list-item">
+                          <a href={post.uri}>{post.title}</a>
+                        </span>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+            </div>
+
             <hr />
             <div className="blog-categories blog-sharing">
               {wpPost.categories.nodes.map(category => {
