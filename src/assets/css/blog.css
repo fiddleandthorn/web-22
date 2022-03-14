@@ -5,7 +5,7 @@
 
 .blog-header {
   padding: 5em 0 8em 0;
-  background-color: #fcf9f3;
+  background-color: #A0613B;
   position: relative;
   overflow: hidden;
 }
@@ -15,6 +15,8 @@
   letter-spacing: -.02em;
   line-height: 1.2;
   margin: 0;
+  color: white;
+  margin-top: 0.5rem;
 }
 
 .blog-header .hidden {
@@ -31,12 +33,16 @@
 .blog-header .badge {
   margin: 0 0 1rem 0;
   font-size: 70%;
+  color: white;
+  background: #D59751;
 }
 
 .blog-header .blog-header-intro-text {
   font-size: 1.3125rem;
-  color: #666666;
   margin-bottom: 0;
+  color: white;
+  opacity: 0.5;
+  margin-top: 0.5rem;
 }
 
 .blog-header .blog-header-content {
@@ -99,6 +105,10 @@
 
 .blog-body .container .blog-sidebar {
   display: none;
+}
+
+.blog-sidebar .badge {
+  background-color: #646C43;
 }
 
 .blog-sidebar .sidebar-card .card-body {
@@ -197,6 +207,7 @@
 
 .blog-sidebar .blog-list-block a {
   color: #161c2d;
+  opacity: 0.8;
 }
 
 .blog-sidebar .blog-sidebar-block {
@@ -204,6 +215,10 @@
   height: calc(100vh - 8rem);
   top: 0;
   padding-top: 4rem;
+}
+
+.blog-content .blog-list-block .badge {
+  background: #E9B949;
 }
 
 .blog-content .blog-image {
@@ -246,7 +261,7 @@
 
 .blog-content .blog-location .blog-location-information .h2 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 .blog-content .blog-location .blog-location-information p {

@@ -62,7 +62,6 @@ body {
 */
 
 h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
-  font-family: "Noto Serif JP", serif;
   font-weight: 400;
   letter-spacing: -0.01em;
 }
@@ -133,8 +132,8 @@ hr {
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  background-color: rgba(241,183,38,.1);
-  color: #f1b725;
+  background-color: #D59751;
+  color: white!important;
   letter-spacing: -0.02rem;
   text-decoration: none!important;
 }
@@ -347,6 +346,7 @@ hr {
   background: none;
   box-shadow: unset!important;
   overflow: visible;
+  margin-bottom: 2rem;
 }
 
 .plant-cards .plant-card .image {
@@ -361,6 +361,7 @@ hr {
   margin-top: -3rem;
   position: relative;
   z-index: 100;
+  border-radius: 0.5rem;
 }
 
 .plant-cards .plant-card .card-body p.h4 {
@@ -478,35 +479,42 @@ hr {
 .footer {
   overflow: hidden;
   margin-top: 4rem;
+  color: white;
 }
 
 .footer .shape {
-  transform: scale(2);
-  color: #fcf9f3;
+  transform: scale(5);
+  color: #A0613B;
 }
 
 .sub-footer {
-  background: #fcf9f3;
+  background: #A0613B;
   padding: 4rem 0 3rem 0;
   margin-top: -5px;
 }
 
 .footer-note {
-  background: #fcf9f3;
+  background: #A0613B;
   padding: 0.5rem 0;
 }
 
 .footer-note p {
   font-size: 0.8rem;
-  color: #666666;
+  color: #fff;
+  opacity: 0.5;
 }
 
 .footer .email-subscribe {
   display: flex;
   flex-wrap: wrap;
-  border-top: 1px solid #e0ded9;
-  border-bottom: 1px solid #e0ded9;
+  border-top: 1px solid #ffffff50;
+  border-bottom: 1px solid #ffffff50;
   align-items: center;
+}
+
+.footer .text-muted {
+  color: white!important;
+  opacity: 0.5!important;
 }
 
 .footer .email-subscribe .half {
@@ -544,11 +552,13 @@ hr {
 .footer .details .social-links {
   display: flex;
   margin-top: 2rem;
+  color: white;
 }
 
 .footer .details .social-links svg {
   width: 20px;
   margin-right: 1rem;
+  color: white;
 }
 
 .footer .details .quarter {
@@ -573,11 +583,15 @@ hr {
   color: #57584a;
 }
 
+.footer .title {
+  color: #fff;
+}
+
 .footer a {
   display: block;
   text-decoration: none;
   margin-bottom: 0.5rem;
-  color: #666666;
+  color: #fff;
 }
 
 .footer a.h4 {
@@ -1025,7 +1039,7 @@ input:focus {
 
 .big-button .button-light {
   min-width: 50%;
-  margin-top: 2rem;
+  margin-top: 0rem;
 }
 
 .big-button .button {
@@ -1285,13 +1299,30 @@ input:focus {
 }
 
 .featured-plants {
-  background: #fcf9f3;
   margin-top: 0;
   padding-top: 4rem;
+  background: #2D361F;
+}
+
+.featured-plants .section-intro h3, .featured-plants .section-intro .title, .featured-plants .section-intro .text-muted {
+  color: white!important;
+}
+
+.featured-plants .section-intro .text-muted {
+  opacity: 0.5;
 }
 
 .featured-plants .big-button {
   padding-bottom: 6rem;
+}
+
+.featured-plants .big-button .button-light {
+  color: white;
+}
+
+.featured-plants .big-button .button-light:hover {
+  background: #646C43;
+  border-color: #646C43;
 }
 
 .shape-wrapper {
