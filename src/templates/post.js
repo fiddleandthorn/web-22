@@ -116,13 +116,11 @@ const WpPostTemplate = ({ props, data }) => {
           <div className="blog-sidebar">
             <div className="blog-sidebar-block-wrapper">
               <div className="blog-sidebar-block">
-                <p className="h4">You might also like...</p>
-                <hr />
+                <p className="h4">We think you'll like these!</p>
                 <ul className="blog-list-block">
                   {relatedPosts.slice(0, 5).map((post, index) => {
                     return (
                       <li>
-                        <span className="badge">{index + 1}</span>
                         <span className="list-item">
                           <a href={post.uri}>{post.title}</a>
                         </span>
@@ -141,14 +139,12 @@ const WpPostTemplate = ({ props, data }) => {
               </div>
             </div>
             <div className="blog-sidebar-block-wrapper">
-              <div className="blog-sidebar-block">
+              <div className="blog-sidebar-block rust">
                 <p className="h4">Others are reading...</p>
-                <hr />
                 <ul className="blog-list-block">
                   {relatedPosts.slice(5, 10).map((post, index) => {
                     return (
                       <li>
-                        <span className="badge">{index + 1}</span>
                         <span className="list-item">
                           <a href={post.uri}>{post.title}</a>
                         </span>
