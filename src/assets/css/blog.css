@@ -78,6 +78,14 @@
 
 .blog-body a {
   color: #e9b949;
+  text-decoration: none;
+}
+
+.blog-body a:hover {
+  text-decoration: underline;
+}
+
+.blog-body .blog-content a {
   text-decoration: underline;
 }
 
