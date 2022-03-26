@@ -1,6 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 
+import logo from "../images/logo-white.svg"
+
+
 const Footer = () => {
 
   return (
@@ -35,7 +38,9 @@ const Footer = () => {
         </div>
         <div className="container details">
           <div className="quarter">
-            <a href="/" className="h4">Fiddle &amp; Thorn</a>
+            <a href="/" className="logo-wrapper">
+              <img src={logo} className="logo" alt="Fiddle & Thorn" />
+            </a>
             <p className="text-muted">Helping you care for your houseplants.</p>
             <div className="social-links">
               <a href="https://www.instagram.com/fiddleandthorn/" aria-label="Instagram">

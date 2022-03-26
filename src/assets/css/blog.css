@@ -4,7 +4,7 @@
 */
 
 .blog-header {
-  padding: 5em 0 8em 0;
+  padding: 8em 0 8em 0;
   background-color: #A0613B;
   position: relative;
   overflow: hidden;
@@ -218,7 +218,7 @@
   position: sticky;
   height: calc(100vh - 8rem);
   top: 0;
-  padding-top: 3rem;
+  padding-top: 7rem;
 }
 
 .blog-sidebar-block .h4 {

@@ -1,11 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
 import Helmet from "react-helmet"
 import CookieConsent from "react-cookie-consent";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+
 
 import { withPrefix, useStaticQuery, graphql } from "gatsby"
 
 import Seo from '../components/seo.js';
 import Search from "../components/search.js"
+
+import logo from "../images/logo.svg"
+import search from "../images/search.svg"
+import menu from "../images/menu.svg"
 
 
 const Header = () => {
@@ -48,27 +54,50 @@ const Header = () => {
       <div className="navigation">
         <div className="container">
           <div className="full">
-            <a href="/" className="h4">Fiddle &amp; Thorn</a>
+            <a href="/">
+              <img src={logo} className="logo" alt="Fiddle & Thorn" />
+            </a>
 
             <ul className="menu">
-
+              <li className="nav-link">
+                <a href="/">Home</a>
+              </li>
               <li className="nav-link">
                 <a href="/plants/">Plant Care</a>
                 <div className="dropdown">
                   <div className="container">
                     <div className="quarter">
-                      <p className="title">Categories</p>
-                      <a href="/plants/categories/low-light">Low Light</a>
-                      <a href="/plants/categories/low-effort">Low Effort</a>
-                      <a href="/plants/categories/pet-friendly">Pet Friendly</a>
-                      <a href="/plants/categories/office-friendly">Office Friendly</a>
+                      <div className="link-box">
+                        <p className="title">Categories</p>
+                        <a href="/plants/categories/low-light">Low Light Plants</a>
+                        <a href="/plants/categories/low-effort">Low Effort Plants</a>
+                        <a href="/plants/categories/pet-friendly">Pet Friendly Plants</a>
+                        <a href="/plants/categories/office-friendly">Office Friendly Plants</a>
+                      </div>
                     </div>
                     <div className="quarter">
-                      <p className="title">Most Popular</p>
-                      <a href="/plants/swiss-cheese-plant/">Monstera</a>
-                      <a href="/plants/fiddle-leaf-fig/">Fiddle Leaf Fig</a>
-                      <a href="/plants/chinese-money-plant/">Pilea</a>
-                      <a href="/plants/rubber-plant/">Rubber Plant</a>
+                      <div className="link-box rust">
+                        <p className="title">Most Popular</p>
+                        <a href="/plants/swiss-cheese-plant/">Monstera</a>
+                        <a href="/plants/fiddle-leaf-fig/">Fiddle Leaf Fig</a>
+                        <a href="/plants/chinese-money-plant/">Pilea</a>
+                        <a href="/plants/rubber-plant/">Rubber Plant</a>
+                      </div>
+                    </div>
+
+                    <div className="quarter">
+                      <div className="image-box">
+                        <StaticImage src="../images/low-effort.png" alt="Low Effort Plants" width={250} quality={20} />
+                        <p className="h4">Low Effort Houseplants</p>
+                        <a href="/plants/categories/low-light" className="button">View All</a>
+                      </div>
+                    </div>
+                    <div className="quarter">
+                      <div className="image-box">
+                        <StaticImage src="../images/most-popular.jpg" alt="Most Popular Plants" width={250} quality={20} />
+                        <p className="h4">Most Popular Houseplants</p>
+                        <a href="/plants/categories/most-popular" className="button">View All</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -78,13 +107,39 @@ const Header = () => {
                 <div className="dropdown">
                   <div className="container">
                     <div className="quarter">
-                      <p className="title">Categories</p>
-                      <a href="/journal/problems">Plant Issues</a>
-                      <a href="/journal/propagation">Propagation</a>
-                      <a href="/journal/how-to">How-To</a>
-                      <a href="/journal/recommendations">Recommendations</a>
+                      <div className="link-box">
+                        <p className="title">Categories</p>
+                        <a href="/journal/problems">Plant Issues</a>
+                        <a href="/journal/propagation">Propagation Guides</a>
+                        <a href="/journal/how-to">How-To Guides</a>
+                        <a href="/journal/recommendations">Recommendations</a>
+                      </div>
+                    </div>
+                    <div className="quarter">
+                      <div className="link-box rust">
+                        <p className="title">Handy Guides</p>
+                        <a href="/humidity-guide/">Humidity Guide</a>
+                        <a href="/lighting-guide/">Lighting Guide</a>
+                        <a href="/watering-guide/">Watering Guide</a>
+                        <a href="/houseplants-for-beginner-plant-parents/">Beginner Houseplants</a>
+                      </div>
+                    </div>
+                    <div className="quarter">
+                      <div className="image-box">
+                        <StaticImage src="../images/problems.jpg" alt="Houseplant Problems" width={250} quality={20} />
+                        <p className="h4">Solve Your Plant Problems</p>
+                        <a href="/journal/problems" className="button">Get Started</a>
+                      </div>
+                    </div>
+                    <div className="quarter">
+                      <div className="image-box">
+                        <StaticImage src="../images/propagation.jpg" alt="Propagation Guides" width={250} quality={20} />
+                        <p className="h4">Propagation Guides</p>
+                        <a href="/journal/propagation" className="button">View All</a>
+                      </div>
                     </div>
                   </div>
+
                 </div>
               </li>
               <li className="nav-link">
@@ -92,13 +147,13 @@ const Header = () => {
               </li>
               <li className="nav-search">
                 <a href="#" className="search-toggle" aria-label="Search" onClick={toggleSearch}>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <img src={search} className="search" alt="search" />
                 </a>
               </li>
 
               <li className="nav-menu">
                 <a href="#" className="search-toggle" aria-label="Menu" onClick={toggleMenu}>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                  <img src={menu} className="search" alt="menu" />
                 </a>
               </li>
 

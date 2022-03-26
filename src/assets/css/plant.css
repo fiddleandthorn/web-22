@@ -15,7 +15,7 @@
 .plant-header .container {
   z-index: 1000;
   position: relative;
-  padding: 7rem 0;
+  padding: 11rem 0 6rem 0;
 }
 
 .plant-header h1 {
@@ -62,7 +62,7 @@
 
 .plant-basic-care .intro-copy {
   text-align: center!important;
-  padding: 4rem 20px 2rem 0;
+  padding: 3rem 20px 2rem 0;
   margin: auto;
 }
 
