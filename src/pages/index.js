@@ -13,7 +13,7 @@ import EmailImg from "../assets/images/email-sub.svg"
 // markup
 const IndexPage = ({ data }) => {
 
-  const userCount = 350000
+  const userCount = 500000;
 
   const headerImage = getImage(data.wpPage.homePage.homeTopImage.localFile)
   const featuredPlants = data.wpPage.homePage.featuredPlants
