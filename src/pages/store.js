@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import loadable from '@loadable/component'
 import Helmet from "react-helmet"
 import AdSense from 'react-adsense';
@@ -13,7 +13,6 @@ import Layout from '../components/layout.js';
 const ErrorTemplate = ({ data }) => {
 
   const headerImage = getImage(data.wpPage.journalPage.journalTopImage.localFile)
-
 
   return (
     <Layout>
@@ -32,14 +31,24 @@ const ErrorTemplate = ({ data }) => {
       </div>
       <div className="product-grid">
         <div className="container">
-          <div className="full">
-            <div className="gumroad-product-embed">
-              <a href="https://fiddleandthorn.gumroad.com/l/houseplant-care-ebook">Loading...</a>
+          <div className="half">
+
+          <div className="card">
+            <a href="https://fiddleandthorn.gumroad.com/l/houseplant-care-ebook">
+              <div href="https://fiddleandthorn.gumroad.com/l/houseplant-care-ebook" className="card-image">
+                <StaticImage src="../images/ebook.webp" alt="eBook Image" />
+              </div>
+            </a>
+            <div className="card-body">
+              <p className="h4"><a href="https://fiddleandthorn.gumroad.com/l/houseplant-care-ebook">Complete Houseplant Care eBook</a></p>
+              <p className="description">Our comprehensive (and rather good looking) eBook that will teach you everything you need to know to successfully care for, and maintain your houseplants!</p>
+              <a style="width:fit-content" href="https://fiddleandthorn.gumroad.com/l/houseplant-care-ebook?_gl=1*nptbzz*_ga*ODQxOTA1NjQzLjE2NDg0ODYzNjQ.*_ga_6LJN6D94N6*MTY0ODQ4NjM2Ni4xLjEuMTY0ODQ4OTQ4My4w" class="gumroad-button">Buy on<span class="gumroad-button-logo"></span></a>
             </div>
+          </div>
+
           </div>
         </div>
       </div>
-      <script src="https://gumroad.com/js/gumroad-embed.js"></script>
 
     </Layout>
   );
