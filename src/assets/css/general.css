@@ -1599,6 +1599,18 @@ input:focus {
   font-weight: 400;
 }
 
+.blog-body .product-grid {
+  margin-bottom: 3rem;
+}
+
+.blog-body .product-grid .h4 {
+  margin-top: 0rem;
+}
+
+.blog-body .product-grid .wide-card .card-body {
+  padding: 2rem 2.5rem;
+}
+
 .product-grid .description {
   color: #666666;
   margin-bottom: 1.5rem;
