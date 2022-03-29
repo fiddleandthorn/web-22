@@ -79,7 +79,7 @@ const IndexPage = ({ data }) => {
               <div className="card-body">
                 <p className="h4">Ebooks</p>
                 <p className="text-muted">In-depth guides on the most important aspects of houseplant care.</p>
-                <a className="arrow-link" href="https://store.fiddleandthorn.com">Shop Now</a>
+                <a className="arrow-link" href="/store/">Shop Now</a>
               </div>
             </div>
           </div>
