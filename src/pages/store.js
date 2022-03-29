@@ -31,12 +31,12 @@ const ErrorTemplate = ({ data }) => {
       </div>
       <div className="product-grid">
         <div className="container">
-          <div className="half">
+          <div className="full">
 
-          <div className="card">
-            <a href="https://fiddleandthorn.gumroad.com/l/houseplant-care-ebook">
-              <div href="https://fiddleandthorn.gumroad.com/l/houseplant-care-ebook" className="card-image">
-                <StaticImage src="../images/ebook.webp" alt="eBook Image" />
+          <div className="card wide-card">
+            <a href="https://fiddleandthorn.gumroad.com/l/houseplant-care-ebook" className="image-wrapper">
+              <div className="card-image">
+                <StaticImage src="../images/ebook-image.png" alt="eBook Image" width={700} aspectRatio={1.3333} quality={100} />
               </div>
             </a>
             <div className="card-body">

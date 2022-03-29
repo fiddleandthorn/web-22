@@ -194,6 +194,7 @@ hr {
   transition: box-shadow .25s ease,transform .25s ease;
   transition: box-shadow .25s ease,transform .25s ease,-webkit-transform .25s ease;
   cursor: pointer;
+  perspective: 1;
 }
 
 .card-image {
