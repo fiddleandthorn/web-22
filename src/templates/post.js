@@ -72,6 +72,47 @@ const WpPostTemplate = ({ props, data }) => {
         <meta name="twitter:image" content={acfData.blogMainImage.sourceUrl} />
       </Helmet>
 
+      <Helmet>
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "WebSite",
+                  "@id": "https://fiddleandthorn.com/#website",
+                  "url": "https://fiddleandthorn.com/",
+                  "name": "Fiddle & Thorn",
+                  "description": "We help you care for your houseplants.",
+                  "inLanguage": "en-US"
+                },
+                {
+                  "@type": "WebPage",
+                  "@id": "https://fiddleandthorn.com${wpPost.uri}#webpage",
+                  "url": "https://fiddleandthorn.com${wpPost.uri}",
+                  "name": "${wpPost.title + " | Fiddle & Thorn"}",
+                  "datePublished": "${wpPost.date}",
+                  "dateModified": "${wpPost.modified}",
+                  "isPartOf": {
+                    "@id": "https://fiddleandthorn.com/#website"
+                  },
+                  "description": "${acfData.blogShortDescription}",
+                  "inLanguage": "en-US",
+                  "potentialAction": [
+                    {
+                      "@type": "ReadAction",
+                      "target": [
+                        "https://fiddleandthorn.com${wpPost.uri}"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          `}
+        </script>
+      </Helmet>
+
       <SubscribeModal />
 
       <div className="blog-header">
@@ -311,6 +352,7 @@ export const query = graphql`
       uri
       slug
       date
+      modified
       acfPostData {
         adsDisabled
         blogShortDescription

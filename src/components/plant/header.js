@@ -4,7 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 const PlantHeader = ({ name, latinName, image }) => {
   return (
-    <div className="plant-header">
+    <div className="plant-header">    
       <GatsbyImage image={image} alt={name} />
       <div className="container">
         <div className="full">

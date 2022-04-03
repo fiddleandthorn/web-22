@@ -128,6 +128,47 @@ const WpPlantTemplate = ({ data }) => {
         <meta name="twitter:image" content={plant.plantIconImage.sourceUrl} />
       </Helmet>
 
+      <Helmet>
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "WebSite",
+                  "@id": "https://fiddleandthorn.com/#website",
+                  "url": "https://fiddleandthorn.com/",
+                  "name": "Fiddle & Thorn",
+                  "description": "We help you care for your houseplants.",
+                  "inLanguage": "en-US"
+                },
+                {
+                  "@type": "WebPage",
+                  "@id": "https://fiddleandthorn.com${data.wpPlant.uri}#webpage",
+                  "url": "https://fiddleandthorn.com${data.wpPlant.uri}",
+                  "name": "${plant.plantName + " Care Guide | Fiddle & Thorn"}",
+                  "datePublished": "${data.wpPlant.date}",
+                  "dateModified": "${data.wpPlant.modified}",
+                  "isPartOf": {
+                    "@id": "https://fiddleandthorn.com/#website"
+                  },
+                  "description": "${"How to best care for your " + plant.plantName + ". Learn all about " + plant.plantName + " basic care, propagation, repotting, and any common issues you might run into."}",
+                  "inLanguage": "en-US",
+                  "potentialAction": [
+                    {
+                      "@type": "ReadAction",
+                      "target": [
+                        "https://fiddleandthorn.com${data.wpPlant.uri}"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          `}
+        </script>
+      </Helmet>
+
       <SubscribeModal />
 
       <PlantHeader name={plant.plantName} latinName={plant.plantLatinName} image={headerImage} />
@@ -413,6 +454,8 @@ export const query = graphql`
     wpPlant(id: { eq: $id }) {
       title
       uri
+      date
+      modified
       plantData {
         adsDisabled
         plantName

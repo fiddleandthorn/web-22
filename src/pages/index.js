@@ -41,6 +41,21 @@ const IndexPage = ({ data }) => {
         <meta name="twitter:image" content={data.wpPage.homePage.homeTopImage.sourceUrl} />
       </Helmet>
 
+      <Helmet>
+        <script type="application/ld+json">
+          {` {
+              "@context" : "http://schema.org",
+              "@type" : "Organization",
+              "url" : "https://fiddleandthorn.com",
+              "brand" : "Fiddle & Thorn",
+              "name" : "Fiddle & Thorn",
+              "alternateName" : "Fiddle & Thorn",
+              "legalName" : "Fiddle & Thorn",
+              "sameAs" : ["https://www.instagram.com/fiddleandthorn/", "https://www.facebook.com/fiddleandthorn", "https://twitter.com/fiddleandthorn", "https://www.pinterest.co.uk/fiddleandthorn/"]
+            }`}
+        </script>
+      </Helmet>
+
       <div className="plant-header big-header">
         <GatsbyImage image={headerImage} alt="Plants Index" />
         <div className="container">
