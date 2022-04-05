@@ -221,7 +221,7 @@ const WpPostTemplate = ({ props, data }) => {
                   <AdSense.Google
                     client='ca-pub-7292810486004926'
                     slot='3678711086'
-                    style={{ width: 250, height: 250, float: 'left' }}
+                    style={{ width: 300, height: 250, float: 'left' }}
                     format=''
                   />
                 }
@@ -245,7 +245,7 @@ const WpPostTemplate = ({ props, data }) => {
                   <AdSense.Google
                     client='ca-pub-7292810486004926'
                     slot='3678711086'
-                    style={{ width: 250, height: 250, float: 'left' }}
+                    style={{ width: 300, height: 250, float: 'left' }}
                     format=''
                   />
                 }
