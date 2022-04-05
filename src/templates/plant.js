@@ -28,7 +28,6 @@ const WpPlantTemplate = ({ data }) => {
 
   const clipOne = getRandomInt(4) + 1
   var clipTwo = getRandomInt(4) + 1
-
   while (clipOne === clipTwo) {
     clipTwo = getRandomInt(4) + 1
   }
@@ -108,6 +107,22 @@ const WpPlantTemplate = ({ data }) => {
     }
   ]
 
+  var filteredFAQs = plant.plantCommonIssues.filter(function(faq){
+    return faq.plantCommonIssuesSingleFaq;
+  });
+
+  var formattedFAQs = []
+  for (const faq of filteredFAQs) {
+    formattedFAQs.push({
+      "@type": "Question",
+      "name": faq.plantCommonIssuesSingleTitle,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.plantCommonIssuesSingleCopy.replace(/(<([^>]+)>)/gi, "")
+      }
+    })
+  }
+
   return (
     <Layout>
 
@@ -167,6 +182,18 @@ const WpPlantTemplate = ({ data }) => {
             }
           `}
         </script>
+        {formattedFAQs.length > 0 &&
+          <script type="application/ld+json">
+            {`
+              {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": ${JSON.stringify(formattedFAQs)}
+              }
+            `}
+          </script>
+        }
+
       </Helmet>
 
       <SubscribeModal />

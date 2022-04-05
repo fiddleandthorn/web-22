@@ -37,15 +37,33 @@ const WpPostTemplate = ({ props, data }) => {
   var plantCounter = 0;
   var adCounter = 0;
 
+  var formattedFAQs = []
+  for (const block of flexibleContent) {
+    if (block.fieldGroupName === "Post_Acfpostdata_ContentBuilder_Dropdowns") {
+      for (const faq of block.dropdowns) {
+        if (faq.faqCheck) {
+          formattedFAQs.push({
+            "@type": "Question",
+            "name": faq.title,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.body.replace(/(<([^>]+)>)/gi, "")
+            }
+          })
+        }
+      }
+    }
+  }
+
+  console.log(formattedFAQs)
+
   var relatedPosts = wpPost.acfPostData.relatedPosts;
   var generalPosts = data.allWpPost.nodes;
-
   if (relatedPosts) {
     var relatedPosts = relatedPosts.concat(generalPosts)
   } else {
     relatedPosts = generalPosts
   }
-
   relatedPosts = Array.from(new Set(relatedPosts.map(a => a.id)))
    .map(id => {
      return relatedPosts.find(a => a.id === id)
@@ -111,6 +129,17 @@ const WpPostTemplate = ({ props, data }) => {
             }
           `}
         </script>
+        {formattedFAQs.length > 0 &&
+          <script type="application/ld+json">
+            {`
+              {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": ${JSON.stringify(formattedFAQs)}
+              }
+            `}
+          </script>
+        }
       </Helmet>
 
       <SubscribeModal />

@@ -4,7 +4,7 @@ import Accordion from "./accordionItem.js";
 
 const BlogAccordion = ({ data }) => {
   return (
-    <div className="accordion-wrapper" itemscope itemtype="https://schema.org/FAQPage">
+    <div className="accordion-wrapper">
       {data.map((dropdown) => {
         return (
           <Accordion title={dropdown.title} content={dropdown.body} faq={dropdown.faqCheck} />

@@ -18,23 +18,7 @@ function Accordion(props) {
     );
   }
 
-  if (props.faq) {
-    return (
-      <div className="accordion__section" itemprop="mainEntity" itemscope="itemscope" itemtype="https://schema.org/Question">
-        <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
-          <p className="accordion__title" itemprop="name">{props.title}</p>
-          <div className="chevron-section">
-            <p>Read More</p>
-            <Chevron className={`${setRotate}`} width={7} fill={"#777"} />
-          </div>
 
-        </button>
-        <div ref={content} style={{ maxHeight: `${setHeight}` }} className="accordion__content" itemprop="acceptedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer">
-          <div className="accordion__text" itemprop="text" dangerouslySetInnerHTML={{ __html: props.content }} />
-        </div>
-      </div>
-    )
-  } else {
     return (
       <div className="accordion__section">
         <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
@@ -49,7 +33,7 @@ function Accordion(props) {
         </div>
       </div>
     )
-  }
+
 
 }
 
