@@ -507,7 +507,7 @@ hr {
 .footer-note p {
   font-size: 0.8rem;
   color: #fff;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .footer .logo-wrapper {
@@ -530,7 +530,6 @@ hr {
 
 .footer .text-muted {
   color: white!important;
-  opacity: 0.5!important;
 }
 
 .footer .email-subscribe .half {
