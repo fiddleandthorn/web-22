@@ -488,6 +488,21 @@ hr {
   color: white;
 }
 
+.footer .button {
+  background-color: #814f32;
+  border: 1px solid #814f32;
+}
+
+.CookieConsent .button {
+  background-color: #636c43;
+  border: 1px solid #636c43;
+}
+
+.CookieConsent .button,
+.footer .button:hover {
+  border: 1px solid #f1b92f;
+}
+
 .footer .shape {
   transform: scale(5);
   color: #A0613B;
