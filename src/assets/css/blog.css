@@ -34,14 +34,13 @@
   margin: 0 0 1rem 0;
   font-size: 70%;
   color: white;
-  background: #D59751;
+  background: #7c4728;
 }
 
 .blog-header .blog-header-intro-text {
   font-size: 1.3125rem;
   margin-bottom: 0;
-  color: white;
-  opacity: 0.5;
+  color: #ffffffed;
   margin-top: 0.5rem;
 }
 
@@ -77,11 +76,12 @@
 */
 
 .blog-body a {
-  color: #e9b949;
+  color: #636c43;
   text-decoration: none;
 }
 
 .blog-body a:hover {
+  color: #e9b949;
   text-decoration: underline;
 }
 
@@ -278,7 +278,7 @@
 
 
 .blog-content .blog-list-block .badge {
-  background: #E9B949;
+  background: #636c43;
 }
 
 .blog-content .blog-image {

@@ -2,8 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import Helmet from "react-helmet"
 import CookieConsent from "react-cookie-consent";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
-
-
 import { withPrefix, useStaticQuery, graphql } from "gatsby"
 
 import Seo from '../components/seo.js';
