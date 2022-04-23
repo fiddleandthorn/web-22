@@ -48,7 +48,7 @@ const SubscribeModal = () => {
                   </div>
                 </form>
               </div>
-              <a className="text-muted" aria-label="Close Modal" onClick={toggleModal}>No thanks...</a>
+              <a href="#" className="text-muted" aria-label="Close Modal" onClick={toggleModal}>No thanks...</a>
 
             </div>
           </div>

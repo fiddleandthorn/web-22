@@ -1498,6 +1498,10 @@ input:focus {
   display: none;
 }
 
+.subscribe-modal a {
+  text-decoration: none;
+}
+
 .subscribe-modal.open {
   display: block;
   position: fixed;

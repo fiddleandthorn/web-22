@@ -20,7 +20,7 @@ const Footer = () => {
               <div id="mc_embed_signup">
                 <form action="https://gmail.us17.list-manage.com/subscribe/post?u=075dae5ebd3f1e67e441d373a&amp;id=76b120be04" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                   <div id="mc_embed_signup_scroll">
-                    <input type="email" placeholder="Enter your email" autocomplete="off" value="" name="EMAIL" className="form-control" id="mce-EMAIL" />
+                    <input type="email" placeholder="Enter your email" autocomplete="off" value="" name="EMAIL" className="form-control" id="mce-footer-EMAIL" />
                     <div id="mce-responses" class="clear">
                       <div class="response" id="mce-error-response" style={{"display":"none"}}></div>
                       <div class="response" id="mce-success-response" style={{"display":"none"}}></div>
@@ -29,7 +29,7 @@ const Footer = () => {
                       <input type="text" name="b_075dae5ebd3f1e67e441d373a_76b120be04" tabindex="-1" value="" />
                     </div>
                     <div class="clear">
-                      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" />
+                      <input type="submit" value="Subscribe" name="subscribe" id="mc-footer-embedded-subscribe" class="button" />
                     </div>
                   </div>
                 </form>
