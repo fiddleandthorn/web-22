@@ -30,6 +30,9 @@ const Layout = ({ children, location }) => {
   return (
     <>
       <Helmet htmlAttributes={{lang: 'en',}} />
+      <Helmet>
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      </Helmet>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main>
         {children}
