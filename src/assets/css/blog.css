@@ -87,6 +87,7 @@
 
 .blog-body .blog-content a {
   text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 
