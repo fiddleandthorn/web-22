@@ -284,6 +284,16 @@ const WpPlantTemplate = ({ data }) => {
       </div>
       <Lines flipped={true} />
 
+      {plant.plantExtraContent !== null &&
+        <div className="plant-simple-table plant-additional-content">
+          <div className="container plant-dropdowns">
+            <div className="full" dangerouslySetInnerHTML={{__html: plant.plantExtraContent }} />
+          </div>
+        </div>
+      }
+      {plant.plantExtraContent !== null &&
+        <Lines flipped={true} />
+      }
       <div className="plant-common-problems">
         <div className="container intro">
           <div className="third">
@@ -492,6 +502,7 @@ export const query = graphql`
         plantHumidityRating
         plantWaterRating
         plantSoilRating
+        plantExtraContent
         plantDetailContent {
           plantDetailContentCopy
           plantDetailContentTitle
@@ -565,8 +576,7 @@ export const query = graphql`
               }
             }
           }
-
-        plantRelatedPosts {
+         plantRelatedPosts {
             ... on WpPost {
               id
               uri
