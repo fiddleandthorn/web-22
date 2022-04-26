@@ -32,6 +32,7 @@ const WpPostTemplate = ({ props, data }) => {
   const flexibleContent = acfData.contentBuilder
 
   const publishDate = wpPost.date.split('T')[0];
+  const updateDate = wpPost.modified.split('T')[0];
 
   var locationCounter = 0;
   var plantCounter = 0;
@@ -54,8 +55,6 @@ const WpPostTemplate = ({ props, data }) => {
       }
     }
   }
-
-  console.log(formattedFAQs)
 
   var relatedPosts = wpPost.acfPostData.relatedPosts;
   var generalPosts = data.allWpPost.nodes;
@@ -158,7 +157,8 @@ const WpPostTemplate = ({ props, data }) => {
             </div>
             <h1>{wpPost.title}</h1>
             <p className="blog-header-intro-text">{acfData.blogShortDescription}</p>
-            <p className="hidden">{publishDate}</p>
+            <p className="date-published hidden">{publishDate}</p>
+            <p className="date-updated hidden">{updateDate}</p>
           </div>
         </div>
         <div className="shape-bottom">
