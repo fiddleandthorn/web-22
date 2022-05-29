@@ -19,6 +19,7 @@ const BlogImage = loadable(() => import('../components/blog/image.js'));
 const BlogLocation = loadable(() => import('../components/blog/location.js'));
 const BlogPlant = loadable(() => import('../components/blog/plant.js'));
 const BlogAccordion = loadable(() => import('../components/blog/accordion.js'));
+const BlogPrintToPage = loadable(() => import('../components/blog/printToPage.js'));
 const EbookBanner = loadable(() => import('../components/blog/ebook-banner.js'));
 
 
@@ -350,9 +351,15 @@ const PostFlexibleContent = ({ content, locationCounter, plantCounter, adCounter
         }
 
         if (block.fieldGroupName === "Post_Acfpostdata_ContentBuilder_Dropdowns") {
-          return (
-            <BlogAccordion data={block.dropdowns} />
-          )
+          if (block.printToPage === true) {
+            return (
+              <BlogPrintToPage data={block.dropdowns} />
+            )
+          } else {
+            return (
+              <BlogAccordion data={block.dropdowns} />
+            )
+          }
         }
 
         if (block.fieldGroupName === "Post_Acfpostdata_ContentBuilder_Ebook") {
@@ -493,6 +500,7 @@ export const query = graphql`
           }
           ... on WpPost_Acfpostdata_ContentBuilder_Dropdowns {
             fieldGroupName
+            printToPage
             dropdowns {
               body
               faqCheck

@@ -367,6 +367,25 @@
   margin-bottom: 4rem;
 }
 
+.print-to-page {
+  padding: 0.5rem 2.5rem;
+  background: #fcf9f3;
+  border-radius: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.print-to-page h4 {
+  margin-top: 1.5rem;
+}
+
+.print-to-page hr {
+  margin: 2rem 0;
+}
+
+.print-to-page hr:last-of-type {
+  display: none
+}
+
 .accordion-wrapper {
   margin-bottom: 4rem;
 }
