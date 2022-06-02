@@ -10,6 +10,8 @@ import Layout from '../components/layout.js';
 import PlantHeader from '../components/plant/header.js';
 import Lines from '../components/lines.js';
 import PlantAccordion from '../components/plant/accordion.js';
+import PlantFaqsAccordion from '../components/plant/faqsAccordion.js';
+
 import SubscribeModal from '../components/subscribe-modal.js';
 
 const WpPlantTemplate = ({ data }) => {
@@ -112,6 +114,21 @@ const WpPlantTemplate = ({ data }) => {
   });
 
   var formattedFAQs = []
+
+  if (plant.plantFaqs) {
+    for (const faq of plant.plantFaqs) {
+      formattedFAQs.push({
+        "@type": "Question",
+        "name": faq.plantFaqsSingleTitle,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.plantFaqsSingleCopy.replace(/(<([^>]+)>)/gi, "")
+        }
+      })
+    }
+  }
+
+
   for (const faq of filteredFAQs) {
     formattedFAQs.push({
       "@type": "Question",
@@ -122,6 +139,8 @@ const WpPlantTemplate = ({ data }) => {
       }
     })
   }
+
+
 
   return (
     <Layout>
@@ -294,6 +313,31 @@ const WpPlantTemplate = ({ data }) => {
       {plant.plantExtraContent !== null &&
         <Lines flipped={true} />
       }
+
+
+      {plant.plantFaqs !== null &&
+        <div className="plant-basic-care plant-faqs plant-common-problems">
+          <div className="container intro ">
+            <div className="full intro-copy">
+              <h3 class="h2"><span className="text-yellow">{plant.plantName}</span> FAQs</h3>
+              <p className="text-muted">Quick and simple answers to the most common questions we see about the {plant.plantName}. </p>
+            </div>
+          </div>
+          <div className="container plant-dropdowns">
+            <div className="full">
+
+              <PlantFaqsAccordion data={plant.plantFaqs} />
+
+            </div>
+          </div>
+        </div>
+      }
+
+      {plant.plantFaqs !== null &&
+        <Lines flipped={true} />
+      }
+
+
       <div className="plant-common-problems">
         <div className="container intro">
           <div className="third">
@@ -511,6 +555,10 @@ export const query = graphql`
           plantCommonIssuesSingleCopy
           plantCommonIssuesSingleFaq
           plantCommonIssuesSingleTitle
+        }
+        plantFaqs {
+          plantFaqsSingleTitle
+          plantFaqsSingleCopy
         }
         plantMainImage {
           sourceUrl

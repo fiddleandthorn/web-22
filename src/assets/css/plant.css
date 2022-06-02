@@ -117,6 +117,22 @@
   margin-top: 4rem;
 }
 
+.plant-faqs .intro-copy {
+  padding: 0rem 20px 0rem 0;
+  max-width: 550px!important;
+}
+.plant-faqs .intro-copy .h2 {
+  margin-top: 1rem;
+}
+
+.plant-faqs .accordion__title {
+  color: #161c2d!important;
+}
+
+.plant-faqs .plant-dropdowns {
+  margin-top: 2rem!important;
+}
+
 .plant-common-problems {
   margin: 4rem 0 0 0;
 }
