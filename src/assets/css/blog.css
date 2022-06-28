@@ -492,6 +492,7 @@
   .chevron-section {
     display: flex;
     padding-left: 3rem;
+    align-items: center;
   }
 
   .chevron-section p {
