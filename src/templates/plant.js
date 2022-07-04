@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import Helmet from "react-helmet";
 import AdSense from 'react-adsense';
 
@@ -337,6 +337,43 @@ const WpPlantTemplate = ({ data }) => {
         <Lines flipped={true} />
       }
 
+      <div>
+        <div className="container plant-basic-care">
+          <div className="full intro-copy">
+            <h4 className="h2">{plant.plantName} Care Starter Kit</h4>
+            <p className="text-muted">We've put together this great little starter kit that includes all of the equipment and information you'll need to take proper care of your {plant.plantName}.</p>
+          </div>
+        </div>
+        <div className="container starter-kit">
+          <div className="quarter">
+            <a href="/a/spray-bottles" target="_blank">
+              <StaticImage src="../images/starter-kit-bottles.png" alt="Spray Bottles" width={700} aspectRatio={1} quality={100} />
+            </a>
+            <a href="/a/spray-bottles" target="_blank" className="button">Buy on Amazon</a>
+          </div>
+          <div className="quarter">
+            <a href="/a/watering-can" target="_blank">
+              <StaticImage src="../images/starter-kit-can.jpg" alt="Watering Can" width={700} aspectRatio={1} quality={100} />
+            </a>
+            <a href="/a/watering-can" target="_blank" className="button">Buy on Amazon</a>
+          </div>
+          <div className="quarter">
+            <a href="/a/humidifier" target="_blank">
+              <StaticImage src="../images/starter-kit-humidifier.png" alt="Humidifier" width={700} aspectRatio={1} quality={100} />
+            </a>
+            <a href="/a/humidifier" target="_blank" className="button">Buy on Amazon</a>
+          </div>
+          <div className="quarter">
+            <a href="https://fiddleandthorn.gumroad.com/l/houseplant-care-ebook" target="_blank">
+              <StaticImage src="../images/starter-kit-ebook.jpg" alt="eBook" width={700} aspectRatio={1} quality={100} />
+            </a>
+            <a href="https://fiddleandthorn.gumroad.com/l/houseplant-care-ebook" target="_blank" className="button">Buy on Gumroad</a>
+          </div>
+        </div>
+      </div>
+
+
+      <Lines flipped={true} />
 
       <div className="plant-common-problems">
         <div className="container intro">

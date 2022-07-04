@@ -213,6 +213,40 @@
   margin-bottom: 2rem;
 }
 
+.starter-kit {
+  display: flex;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.starter-kit .quarter {
+  text-align: center;
+}
+
+.starter-kit .quarter img {
+  border-radius: 0.325rem;
+  margin-bottom: 1rem;
+}
+
+.starter-kit .quarter .button {
+  margin-top: 1rem;
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .starter-kit {
+    margin-bottom: 1rem;
+  }
+  .starter-kit .quarter {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .starter-kit .quarter .button {
+    margin-bottom: 2rem;
+  }
+}
+
 @media (min-width: 768px) {
   .plant-basic-care .intro-copy {
     width: 72.5%;
