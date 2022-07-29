@@ -178,5 +178,13 @@
   {
     "fromPath": "/burros-tail-turning-brown-reasons-and-how-to-fit-it/",
     "toPath": "/burros-tail-turning-brown-reasons-and-how-to-fix-it/"
+  },
+  {
+    "fromPath": "/plants/ponytail-palm/",
+    "toPath": "/ponytail-palm-care/"
+  },
+  {
+    "fromPath": "/journal/plant-care-guides/",
+    "toPath": "/plants/"
   }
 ]
