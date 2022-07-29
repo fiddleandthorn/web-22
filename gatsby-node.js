@@ -78,8 +78,10 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const categoryTemplate = path.resolve(`./src/templates/category.js`)
 
-  allCategories.forEach(category => {
+  const excludeCategories = ['plant-care-guides']
 
+  allCategories.forEach(category => {
+    if (!excludeCategories.includes(category.slug)) {
       const postsPerPage = 15
       const numPages = Math.ceil(category.count / postsPerPage)
 
@@ -97,7 +99,7 @@ exports.createPages = async ({ graphql, actions }) => {
           },
         })
       })
-
+    }
   })
 
 
@@ -121,8 +123,10 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const plantTemplate = path.resolve(`./src/templates/plant.js`)
 
+  const excludePlants = ['/plants/ponytail-palm/']
 
   allPlants.forEach(plant => {
+    if (!excludePlants.includes(plant.uri)) {
       createPage({
         // will be the url for the page
         path: plant.uri,
@@ -134,6 +138,7 @@ exports.createPages = async ({ graphql, actions }) => {
           id: plant.id,
         },
       })
+    }
   })
 
 
