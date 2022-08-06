@@ -188,7 +188,7 @@
     "toPath": "/plants/"
   },
   {
-    "fromPath": "/journal/plant-care-guides/test/",
-    "toPath": "/plants/"
+    "fromPath": "/plants/sago-palm/",
+    "toPath": "/sago-palm-care/"
   }
 ]
