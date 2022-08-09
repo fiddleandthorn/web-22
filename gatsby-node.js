@@ -123,7 +123,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const plantTemplate = path.resolve(`./src/templates/plant.js`)
 
-  const excludePlants = ['/plants/ponytail-palm/']
+  const excludePlants = ['/plants/ponytail-palm/', '/plants/sago-palm']
 
   allPlants.forEach(plant => {
     if (!excludePlants.includes(plant.uri)) {
