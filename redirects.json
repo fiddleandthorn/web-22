@@ -190,5 +190,9 @@
   {
     "fromPath": "/plants/sago-palm/",
     "toPath": "/sago-palm-care/"
+  },
+  {
+    "fromPath": "/plants/lucky-bamboo/",
+    "toPath": "/lucky-bamboo-care/"
   }
 ]
