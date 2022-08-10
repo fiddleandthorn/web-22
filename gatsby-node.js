@@ -126,7 +126,9 @@ exports.createPages = async ({ graphql, actions }) => {
   const excludePlants = [
     '/plants/ponytail-palm/',
     '/plants/sago-palm/',
-    '/plants/lucky-bamboo/'
+    '/plants/lucky-bamboo/',
+    '/plants/weeping-fig/',
+    '/plants/cactus/'
   ]
 
   allPlants.forEach(plant => {

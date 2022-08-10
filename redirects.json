@@ -194,5 +194,13 @@
   {
     "fromPath": "/plants/lucky-bamboo/",
     "toPath": "/lucky-bamboo-care/"
+  },
+  {
+    "fromPath": "/plants/weeping-fig/",
+    "toPath": "/weeping-fig-care/"
+  },
+  {
+    "fromPath": "/plants/cactus/",
+    "toPath": "/cactus-care/"
   }
 ]
