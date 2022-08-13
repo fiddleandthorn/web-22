@@ -202,5 +202,21 @@
   {
     "fromPath": "/plants/cactus/",
     "toPath": "/cactus-care/"
+  },
+  {
+    "fromPath": "/plants/hosta/",
+    "toPath": "/hosta-care/"
+  },
+  {
+    "fromPath": "/plants/fan-palm/",
+    "toPath": "/fan-palm-care/"
+  },
+  {
+    "fromPath": "/plants/english-ivy/",
+    "toPath": "/english-ivy-care/"
+  },
+  {
+    "fromPath": "/plants/cast-iron-plant/",
+    "toPath": "/cast-iron-plant-care/"
   }
 ]
