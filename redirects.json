@@ -218,5 +218,21 @@
   {
     "fromPath": "/plants/cast-iron-plant/",
     "toPath": "/cast-iron-plant-care/"
+  },
+  {
+    "fromPath": "/plants/air-plant/",
+    "toPath": "/air-plant-care/"
+  },
+  {
+    "fromPath": "/plants/jade-plant/",
+    "toPath": "/jade-plant-care/"
+  },
+  {
+    "fromPath": "/plants/boston-fern/",
+    "toPath": "/boston-fern-care/"
+  },
+  {
+    "fromPath": "/plants/birds-nest-fern/",
+    "toPath": "/birds-nest-fern-care/"
   }
 ]
