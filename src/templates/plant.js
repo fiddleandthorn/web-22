@@ -347,25 +347,25 @@ const WpPlantTemplate = ({ data }) => {
         <div className="container starter-kit">
           <div className="quarter">
             <a href="/a/spray-bottles" target="_blank">
-              <StaticImage src="../images/starter-kit-bottles.png" alt="Spray Bottles" width={700} aspectRatio={1} quality={100} />
+              <StaticImage src="../images/starter-kit-bottles.png" alt="Spray Bottles" width={700} aspectRatio={1} quality={100} formats={["PNG"]} />
             </a>
             <a href="/a/spray-bottles" target="_blank" className="button">Buy on Amazon</a>
           </div>
           <div className="quarter">
             <a href="/a/watering-can" target="_blank">
-              <StaticImage src="../images/starter-kit-can.jpg" alt="Watering Can" width={700} aspectRatio={1} quality={100} />
+              <StaticImage src="../images/starter-kit-can.png" alt="Watering Can" width={700} aspectRatio={1} quality={100}  formats={["PNG"]} />
             </a>
             <a href="/a/watering-can" target="_blank" className="button">Buy on Amazon</a>
           </div>
           <div className="quarter">
             <a href="/a/humidifier" target="_blank">
-              <StaticImage src="../images/starter-kit-humidifier.png" alt="Humidifier" width={700} aspectRatio={1} quality={100} />
+              <StaticImage src="../images/starter-kit-humidifier.png" alt="Humidifier" width={700} aspectRatio={1} quality={100} formats={["PNG"]} />
             </a>
             <a href="/a/humidifier" target="_blank" className="button">Buy on Amazon</a>
           </div>
           <div className="quarter">
             <a href="https://fiddleandthorn.gumroad.com/l/houseplant-care-ebook" target="_blank">
-              <StaticImage src="../images/starter-kit-ebook.jpg" alt="eBook" width={700} aspectRatio={1} quality={100} />
+              <StaticImage src="../images/starter-kit-ebook.png" alt="eBook" width={700} aspectRatio={1} quality={100} formats={["PNG"]} />
             </a>
             <a href="https://fiddleandthorn.gumroad.com/l/houseplant-care-ebook" target="_blank" className="button">Buy on Gumroad</a>
           </div>
