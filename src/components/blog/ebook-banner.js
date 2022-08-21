@@ -7,7 +7,7 @@ const EbookBanner = () => {
       <div className="card wide-card">
         <a href="https://fiddleandthorn.gumroad.com/l/houseplant-care-ebook" className="image-wrapper">
           <div className="card-image" style={{height: "100%"}}>
-            <StaticImage src="../images/ebook-image.png" alt="eBook Image" style={{height: "100%"}} width={700} aspectRatio={1.3333} quality={100} />
+            <StaticImage src="../../images/ebook-image.png" alt="eBook Image" style={{height: "100%"}} width={700} aspectRatio={1.3333} quality={100} />
           </div>
         </a>
         <div className="card-body">
