@@ -399,7 +399,7 @@ export const query = graphql`
               gatsbyImageData (
                 width: 700
                 placeholder: DOMINANT_COLOR
-                formats: [AUTO, WEBP, AVIF]
+                formats: [AUTO, AVIF]
                 quality: 50
               )
             }
@@ -420,7 +420,7 @@ export const query = graphql`
                     width: 700
                     aspectRatio: 1.333
                     placeholder: DOMINANT_COLOR
-                    formats: [AUTO, WEBP, AVIF]
+                    formats: [AUTO, AVIF]
                     quality: 50
                   )
                 }
@@ -438,7 +438,7 @@ export const query = graphql`
                     width: 700
                     aspectRatio: 1.333
                     placeholder: DOMINANT_COLOR
-                    formats: [AUTO, WEBP, AVIF]
+                    formats: [AUTO, AVIF]
                     quality: 50
                   )
                 }
@@ -459,7 +459,7 @@ export const query = graphql`
                           width: 700
                           aspectRatio: 1.333
                           placeholder: DOMINANT_COLOR
-                          formats: [AUTO, WEBP, AVIF]
+                          formats: [AUTO, AVIF]
                           quality: 50
                         )
                       }
@@ -483,7 +483,7 @@ export const query = graphql`
                     width: 700
                     aspectRatio: 1.333
                     placeholder: DOMINANT_COLOR
-                    formats: [AUTO, WEBP, AVIF]
+                    formats: [AUTO, AVIF]
                     quality: 50
                   )
                 }
@@ -527,7 +527,7 @@ export const query = graphql`
                       width: 700
                       aspectRatio: 1.333
                       placeholder: DOMINANT_COLOR
-                      formats: [AUTO, WEBP, AVIF]
+                      formats: [AUTO, AVIF]
                       quality: 50
                     )
                   }
@@ -563,7 +563,7 @@ export const query = graphql`
                   width: 700
                   aspectRatio: 1.333
                   placeholder: DOMINANT_COLOR
-                  formats: [AUTO, WEBP, AVIF]
+                  formats: [AUTO, AVIF]
                   quality: 50
                 )
               }
