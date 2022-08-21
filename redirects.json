@@ -234,5 +234,9 @@
   {
     "fromPath": "/plants/birds-nest-fern/",
     "toPath": "/birds-nest-fern-care/"
+  },
+  {
+    "fromPath": "/plants/hoya-carnosa/",
+    "toPath": "/hoya-carnosa-care/"
   }
 ]
