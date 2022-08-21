@@ -35,7 +35,7 @@ module.exports = {
           background_color: '#fefdfb',
           theme_color: '#fefdfb',
           display: 'standalone',
-          icon: 'src/images/icon.png',
+          icon: 'src/images/icon-square.png',
       },
     },
     {
