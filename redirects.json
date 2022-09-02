@@ -238,5 +238,17 @@
   {
     "fromPath": "/plants/hoya-carnosa/",
     "toPath": "/hoya-carnosa-care/"
+  },
+  {
+    "fromPath": "/plants/string-of-hearts/",
+    "toPath": "/string-of-hearts-care/"
+  },
+  {
+    "fromPath": "/plants/aloe-vera/",
+    "toPath": "/aloe-vera-care/"
+  },
+  {
+    "fromPath": "/plants/asparagus-fern/",
+    "toPath": "/asparagus-fern-care/"
   }
 ]
