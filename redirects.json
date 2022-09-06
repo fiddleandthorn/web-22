@@ -250,5 +250,25 @@
   {
     "fromPath": "/plants/asparagus-fern/",
     "toPath": "/asparagus-fern-care/"
+  },
+  {
+    "fromPath": "/plants/hoya-linearis/",
+    "toPath": "/hoya-linearis-care/"
+  },
+  {
+    "fromPath": "/plants/snake-plant/",
+    "toPath": "/snake-plant-care/"
+  },
+  {
+    "fromPath": "/plants/zz-plant/",
+    "toPath": "/zz-plant-care/"
+  },
+  {
+    "fromPath": "/plants/spider-plant/",
+    "toPath": "/spider-plant-care/"
+  },
+  {
+    "fromPath": "/plants/yucca/",
+    "toPath": "/yucca-care/"
   }
 ]

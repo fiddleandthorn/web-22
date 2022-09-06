@@ -140,7 +140,12 @@ exports.createPages = async ({ graphql, actions }) => {
     '/plants/hoya-carnosa/',
     '/plants/string-of-hearts/',
     '/plants/aloe-vera/',
-    '/plants/asparagus-fern/'
+    '/plants/asparagus-fern/',
+    '/plants/hoya-linearis/',
+    '/plants/snake-plant/',
+    '/plants/zz-plant/',
+    '/plants/spider-plant/',
+    '/plants/yucca/'
   ]
 
   allPlants.forEach(plant => {
