@@ -270,5 +270,25 @@
   {
     "fromPath": "/plants/yucca/",
     "toPath": "/yucca-care/"
+  },
+  {
+    "fromPath": "/plants/parlour-palm/",
+    "toPath": "/parlour-palm-care/"
+  },
+  {
+    "fromPath": "/plants/string-of-pearls/",
+    "toPath": "/string-of-pearls-care/"
+  },
+  {
+    "fromPath": "/plants/peace-lily/",
+    "toPath": "/peace-lily-care/"
+  },
+  {
+    "fromPath": "/plants/dragon-tree/",
+    "toPath": "/dragon-tree-care/"
+  },
+  {
+    "fromPath": "/plants/money-tree/",
+    "toPath": "/money-tree-care/"
   }
 ]
