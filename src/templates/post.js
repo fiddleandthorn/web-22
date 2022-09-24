@@ -94,41 +94,90 @@ const WpPostTemplate = ({ props, data }) => {
         <script type="application/ld+json">
           {`
             {
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "WebSite",
-                  "@id": "https://fiddleandthorn.com/#website",
-                  "url": "https://fiddleandthorn.com/",
-                  "name": "Fiddle & Thorn",
-                  "description": "We help you care for your houseplants.",
-                  "inLanguage": "en-US"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "https://fiddleandthorn.com${wpPost.uri}#webpage",
-                  "url": "https://fiddleandthorn.com${wpPost.uri}",
-                  "name": "${wpPost.title + " | Fiddle & Thorn"}",
-                  "datePublished": "${wpPost.date}",
-                  "dateModified": "${wpPost.modified}",
-                  "isPartOf": {
-                    "@id": "https://fiddleandthorn.com/#website"
-                  },
-                  "description": "${acfData.blogShortDescription}",
-                  "inLanguage": "en-US",
-                  "potentialAction": [
-                    {
-                      "@type": "ReadAction",
-                      "target": [
-                        "https://fiddleandthorn.com${wpPost.uri}"
-                      ]
-                    }
-                  ]
+          "@context":"https://schema.org",
+          "@graph":[
+            {
+              "@type":["Person","Organization"],
+              "@id":"https://fiddleandthorn.com/#person",
+              "name":"Fiddle & Thorn"
+            }, {
+              "@type":"WebSite",
+              "@id":"https://fiddleandthorn.com/#website",
+              "url":"https://fiddleandthorn.com",
+              "name":"Fiddle & Thorn",
+              "description": "We help you care for your houseplants.",
+              "publisher":{
+                 "@id":"https://fiddleandthorn.com/#person"
+              },
+              "inLanguage":"en-US"
+              },{
+                "@type":"ImageObject",
+                "@id":"${acfData.blogMainImage.sourceUrl}",
+                "url":"${acfData.blogMainImage.sourceUrl}",
+                "width":"1280",
+                "height":"1248",
+                "inLanguage":"en-US"
+              },{
+                "@type":"Person",
+                "@id":"https://fiddleandthorn.com/about-us/${wpPost.author.node.slug}/",
+                "name":"${wpPost.author.node.name}",
+                "url":"https://fiddleandthorn.com/about-us/${wpPost.author.node.slug}/",
+                "image": {
+                  "@type":"ImageObject",
+                  "@id":"${wpPost.author.node.avatar.url}",
+                  "url":"${wpPost.author.node.avatar.url}",
+                  "caption":"${wpPost.author.node.name}",
+                  "inLanguage":"en-US"
                 }
-              ]
-            }
-          `}
-        </script>
+              },{
+                "@type":"WebPage",
+                "@id":"https://fiddleandthorn.com${wpPost.uri}#webpage",
+                "url":"https://fiddleandthorn.com${wpPost.uri}",
+                "name":"${wpPost.title + " | Fiddle & Thorn"}",
+                "datePublished":"${wpPost.date}",
+                "dateModified":"${wpPost.modified}",
+                "author":{
+                  "@id":"https://fiddleandthorn.com/about-us/${wpPost.author.node.slug}/"
+                },
+                "isPartOf": { 
+                  "@id":"https://fiddleandthorn.com/#website"},
+                  "primaryImageOfPage": {
+                    "@id":"${acfData.blogMainImage.sourceUrl}"
+                  },
+                  "inLanguage":"en-US"
+                },{ 
+                  "@type":"BlogPosting",
+                  "headline":"${wpPost.title + " | Fiddle & Thorn"}",
+                  "datePublished":"${wpPost.date}",
+                  "dateModified":"${wpPost.modified}",
+                  "author": { 
+                    "@id":"https://fiddleandthorn.com/about-us/${wpPost.author.node.slug}/"
+                  },
+                  "publisher": {
+                    "@id":"https://fiddleandthorn.com/#person"
+                  },
+                  "description":"${acfData.blogShortDescription}",
+                  "name":"${wpPost.title + " | Fiddle & Thorn"}",
+                  "@id":"https://fiddleandthorn.com${wpPost.uri}#richSnippet",
+                  "isPartOf": {
+                    "@id":"https://fiddleandthorn.com${wpPost.uri}#webpage"
+                  },
+                    "image":{
+                    "@id":"${acfData.blogMainImage.sourceUrl}"
+                    },
+                    "inLanguage":"en-US",
+                    "mainEntityOfPage": { 
+                     "@id":"https://fiddleandthorn.com${wpPost.uri}#webpage"
+                    }
+                  }
+                ]
+              }
+              `}
+          </script>
+
+
+
+
         {formattedFAQs.length > 0 &&
           <script type="application/ld+json">
             {`
@@ -190,6 +239,8 @@ const WpPostTemplate = ({ props, data }) => {
               </div>
             </div>
 
+            <hr />
+            <p>Written by <a href={"/about-us/" + wpPost.author.node.slug}>{wpPost.author.node.name}</a></p>
             <hr />
             <div className="blog-categories blog-sharing">
               {wpPost.categories.nodes.map(category => {
@@ -389,6 +440,15 @@ export const query = graphql`
       slug
       date
       modified
+      author {
+        node {
+          name
+          slug
+          avatar {
+            url
+          }
+        }
+      }
       acfPostData {
         adsDisabled
         blogShortDescription

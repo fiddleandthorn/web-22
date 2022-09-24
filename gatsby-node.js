@@ -6,18 +6,7 @@ const redirects = require("./redirects.json");
 
 exports.createPages = async ({ graphql, actions }) => {
 
-  // const { createRedirect } = actions;
-  //
-	// redirects.forEach(redirect =>
-	// 	createRedirect({
-	//     fromPath: redirect.fromPath,
-	//     toPath: redirect.toPath,
-  //     isPermanent: true
-	//   })
-	// );
-
   const { createPage } = actions
-
 
   // Get and Create All Posts
   //////////////////////////////////////////////////////////////////////////////
@@ -51,6 +40,42 @@ exports.createPages = async ({ graphql, actions }) => {
       // as a GraphQL variable to query for this post's data.
       context: {
         id: post.id,
+      },
+    })
+  })
+
+  // Get and Create All Authors
+  //////////////////////////////////////////////////////////////////////////////
+
+  const {
+    data: {
+      allWpUser: { nodes: allUsers },
+    },
+  } = await graphql(`
+    query {
+      allWpUser {
+        nodes {
+          slug
+          id
+        }
+      }
+    }
+  `)
+
+  const users = allUsers
+
+  const userTemplate = path.resolve(`./src/templates/user.js`)
+
+  allUsers.forEach(user => {
+    createPage({
+      // will be the url for the page
+      path: "/about-us/" + user.slug,
+      // specify the component template of your choice
+      component: slash(userTemplate),
+      // In the ^template's GraphQL query, 'id' will be available
+      // as a GraphQL variable to query for this post's data.
+      context: {
+        id: user.id,
       },
     })
   })
