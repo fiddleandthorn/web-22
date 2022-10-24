@@ -16,6 +16,10 @@
     "toPath": "https://geni.us/AHSi9N"
   },
   {
+    "fromPath": "/a/humidity-mo",
+    "toPath": "https://geni.us/AHSi9N"
+  },
+  {
     "fromPath": "/a/moisture-monitor",
     "toPath": "https://geni.us/IcgiB"
   },
@@ -25,6 +29,10 @@
   },
   {
     "fromPath": "/a/watering-pot",
+    "toPath": "https://geni.us/hwvf"
+  },
+  {
+    "fromPath": "/a/watering-pots",
     "toPath": "https://geni.us/hwvf"
   },
   {
@@ -97,6 +105,10 @@
   },
   {
     "fromPath": "/a/light-monitor",
+    "toPath": "https://geni.us/bTeiBH"
+  },
+  {
+    "fromPath": "/light-monitor",
     "toPath": "https://geni.us/bTeiBH"
   },
   {
