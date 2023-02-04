@@ -60,7 +60,7 @@ const WpPostTemplate = ({ props, data }) => {
   var relatedPosts = wpPost.acfPostData.relatedPosts;
   var generalPosts = data.allWpPost.nodes;
   if (relatedPosts) {
-    var relatedPosts = relatedPosts.concat(generalPosts)
+    relatedPosts = relatedPosts.concat(generalPosts)
   } else {
     relatedPosts = generalPosts
   }
@@ -202,6 +202,10 @@ const WpPostTemplate = ({ props, data }) => {
                   return (
                     <a href={category.uri} className="badge">{category.name}</a>
                   )
+                } else {
+                  return (
+                    <></>
+                  )
                 }
               })}
             </div>
@@ -247,6 +251,10 @@ const WpPostTemplate = ({ props, data }) => {
                 if (category.name !== "All") {
                   return (
                     <a href={category.uri} className="badge">{category.name}</a>
+                  )
+                } else {
+                  return (
+                    <></>
                   )
                 }
               })}
@@ -325,6 +333,10 @@ const WpPostTemplate = ({ props, data }) => {
                             return (
                               <a href={category.uri} className="badge">{category.name}</a>
                             )
+                          } else {
+                            return (
+                              <></>
+                            )
                           }
                         })}
                       </div>
@@ -363,8 +375,37 @@ const PostFlexibleContent = ({ content, locationCounter, plantCounter, adCounter
       {content.map(block => {
 
         if (block.fieldGroupName === "Post_Acfpostdata_ContentBuilder_Content") {
+
+          let formattedContent = ""
+          if (block.content.split('<h2>').length > 1) {
+            let splitContent = block.content.split('<h2>')
+            for (let i=0; i < splitContent.length; i++) {
+              if (splitContent[i] == "") {
+                let headingId = splitContent[i + 1].split('</h2>')[0].replace(/<\/?[^>]+(>|$)/g, "").replaceAll(' ', '-').toLowerCase().trim()
+                formattedContent = formattedContent.concat('<h2 id="' + headingId + '">', splitContent[i + 1])
+              }
+            }
+          } else {
+            formattedContent = formattedContent.concat(block.content)
+          }
+
+          let formattedContentH3 = ''
+          if (formattedContent.split('<h3>').length > 1) {
+            let splitContent = formattedContent.split('<h3>')
+            for (let i = 0; i < splitContent.length; i++) {
+              if (splitContent[i].split('</h3>').length > 1) {
+                let headingId = splitContent[i].split('</h3>')[0].replace(/<\/?[^>]+(>|$)/g, "").replaceAll(' ', '-').toLowerCase().trim()
+                formattedContentH3 = formattedContentH3.concat('<h3 id="' + headingId + '">', splitContent[i].split('</h3>')[0], '</h3>', splitContent[i].split('</h3>')[1])
+              } else {
+                formattedContentH3 = formattedContentH3.concat(splitContent[i])
+              }
+            }
+          } else {
+            formattedContentH3 = formattedContentH3.concat(formattedContent)
+          }
+
           return (
-            <BlogContent content={block.content} />
+            <BlogContent content={formattedContentH3} />
           )
         }
 

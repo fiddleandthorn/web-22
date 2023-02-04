@@ -1,10 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import Helmet from "react-helmet"
 import CookieConsent from "react-cookie-consent";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
-import { withPrefix, useStaticQuery, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image";
 
-import Seo from '../components/seo.js';
 import Search from "../components/search.js"
 
 import logo from "../images/logo.svg"

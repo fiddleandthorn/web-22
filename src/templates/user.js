@@ -60,6 +60,10 @@ const WpUserTemplate = ({ data }) => {
                                                     return (
                                                         <a href={category.uri} className="badge">{category.name}</a>
                                                     )
+                                                } else {
+                                                    return (
+                                                        <></>
+                                                    )
                                                 }
                                             })}
                                         </div>

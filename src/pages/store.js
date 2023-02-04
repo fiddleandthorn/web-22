@@ -1,9 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
-import loadable from '@loadable/component'
 import Helmet from "react-helmet"
-import AdSense from 'react-adsense';
 
 import "../assets/css/blog.css"
 
