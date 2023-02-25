@@ -29,7 +29,7 @@ const SubscribeModal = () => {
           <div className="close-modal" onClick={toggleModal}/>
           <div className="card">
             <div className="card-body">
-              <p className="h3">Want to take better care of your houseplants?</p>
+              {/* <p className="h3">Want to take better care of your houseplants?</p>
               <p className="text-muted">Join thousands of plant parents who get our latest plant care tips directly to their inbox.</p>
               <div id="mc_embed_signup">
                 <form action="https://gmail.us17.list-manage.com/subscribe/post?u=075dae5ebd3f1e67e441d373a&amp;id=76b120be04" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -47,8 +47,17 @@ const SubscribeModal = () => {
                     </div>
                   </div>
                 </form>
-              </div>
-              <p className="text-muted close-text" aria-label="Close Modal" onClick={toggleModal}>No thanks...</p>
+              </div> */}
+
+              <p className="h3">Take our houseplant survey!</p>
+              <p className="text-muted">Quickly respond to our 30 second houseplant survey and get 75% off our <a style={{ "color": '#e2ac23', "font-weight": "bold"}} target="_blank" href="https://fiddleandthorn.gumroad.com/l/houseplant-care-ebook">Complete Houseplant Care eBook!</a></p>
+
+              <a class="button btn btn-block mt-4" style={{ "font-weight": "bold", "display": "block", "margin-top": "2rem" }}  href="https://forms.gle/h18A6b4q3ebpHVnB7" target="_blank">
+                Take the Survey
+              </a>
+              
+
+              <p className="text-muted close-text" aria-label="Close Modal"  onClick={toggleModal}>No thanks...</p>
 
             </div>
           </div>
