@@ -9,6 +9,12 @@ import Layout from '../components/layout.js';
 import Lines from '../components/lines.js';
 
 import EmailImg from "../assets/images/email-sub.svg"
+import lomi from "../images/features/lomi.png"
+import you from "../images/features/you.png"
+import homesGardens from "../images/features/homes-gardens.png"
+import livingEtc from "../images/features/livingetc.png"
+import bestlife from "../images/features/bestlife.png"
+
 
 // markup
 const IndexPage = ({ data }) => {
@@ -67,6 +73,7 @@ const IndexPage = ({ data }) => {
         <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="#FEFDFB"></path></svg>
       </div>
 
+
       <div className="intro-cards">
         <div className="container">
           <div className="third">
@@ -103,11 +110,40 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
 
-      <div className="recent-posts featured-posts">
+      <div className="featured-bar">
+        <svg viewBox="0 0 2880 48"  class="curve-top" fill="#A0613B" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="#A0613B"></path></svg>
+        <div className="container">
+          <div className="full">
+            <p className="subtitle">Featured In</p>
+          </div>
+        </div>
+        <div className="container">
+          <div className="logo-bar">
+            <div className="logo-wrapper">
+                <img src={lomi} alt="Lomi"/>
+            </div>
+            <div className="logo-wrapper">
+                <img src={you} alt="You Magazine"/>
+            </div>
+            <div className="logo-wrapper">
+                <img src={homesGardens} alt="Homes & Gardens"/>
+            </div>
+            <div className="logo-wrapper">
+                <img src={livingEtc} alt="LivingEtc"/>
+            </div>
+            <div className="logo-wrapper">
+                <img src={bestlife} alt="BestLife"/>
+            </div>
 
+          </div>
+        </div>
+        <svg viewBox="0 0 2880 48"  class="curve-bottom" fill="#fefdfb" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="#fefdfb"></path></svg>
+      </div>
+
+      <div className="recent-posts featured-posts">
         <div className="container section-intro">
           <div className="half text-center">
-            <h3>Featured Posts</h3>
+            <h3>Our Favourite Posts</h3>
             <p className="text-muted">We think you might like these!</p>
           </div>
         </div>
