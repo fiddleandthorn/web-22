@@ -31,6 +31,11 @@ const WpPostTemplate = ({ props, data }) => {
 
   const featuredImage = getImage(acfData.blogMainImage.localFile)
   const flexibleContent = acfData.contentBuilder
+  let featuredImageAlt = acfData.blogMainImage.altText 
+
+  if (featuredImageAlt === "") { 
+    featuredImageAlt = wpPost.title
+  }
 
   const publishDate = wpPost.date.split('T')[0];
   const updateDate = wpPost.modified.split('T')[0];
@@ -223,7 +228,7 @@ const WpPostTemplate = ({ props, data }) => {
       <div className="blog-body">
         <div className="container">
           <div className="blog-content">
-            <GatsbyImage className="blog-featured-image" image={featuredImage} alt={wpPost.title} />
+            <GatsbyImage className="blog-featured-image" image={featuredImage} alt={featuredImageAlt} />
             <PostFlexibleContent content={flexibleContent} locationCounter={locationCounter} plantCounter={plantCounter} adCounter={adCounter} adsDisabled={adsDisabled} />
 
             <div className="blog-sidebar-block-wrapper">
@@ -495,6 +500,7 @@ export const query = graphql`
         blogShortDescription
         blogMainImage {
           sourceUrl
+          altText
           localFile {
             childImageSharp {
               gatsbyImageData (
@@ -515,6 +521,7 @@ export const query = graphql`
             fieldGroupName
             image {
               caption
+              altText
               localFile {
                 childImageSharp {
                   gatsbyImageData (

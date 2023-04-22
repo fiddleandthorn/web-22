@@ -294,9 +294,13 @@
 }
 
 .blog-content .blog-image span {
-  text-align: center;
+  text-align: right;
   font-size: 0.875rem;
   color: #666666;
+}
+
+.blog-content .blog-image span p {
+  margin-top: 0.5rem;
 }
 
 .blog-content .blog-location .gatsby-image-wrapper {
