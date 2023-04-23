@@ -381,36 +381,36 @@ const PostFlexibleContent = ({ content, locationCounter, plantCounter, adCounter
 
         if (block.fieldGroupName === "Post_Acfpostdata_ContentBuilder_Content") {
 
-          let formattedContent = ""
-          if (block.content.split('<h2>').length > 1) {
-            let splitContent = block.content.split('<h2>')
-            for (let i=0; i < splitContent.length; i++) {
-              if (splitContent[i] == "") {
-                let headingId = splitContent[i + 1].split('</h2>')[0].replace(/<\/?[^>]+(>|$)/g, "").replaceAll(' ', '-').toLowerCase().trim()
-                formattedContent = formattedContent.concat('<h2 id="' + headingId + '">', splitContent[i + 1])
-              }
-            }
-          } else {
-            formattedContent = formattedContent.concat(block.content)
-          }
+          // let formattedContent = ""
+          // if (block.content.split('<h2>').length > 1) {
+          //   let splitContent = block.content.split('<h2>')
+          //   for (let i=0; i < splitContent.length; i++) {
+          //     if (splitContent[i] == "") {
+          //       let headingId = splitContent[i + 1].split('</h2>')[0].replace(/<\/?[^>]+(>|$)/g, "").replaceAll(' ', '-').toLowerCase().trim()
+          //       formattedContent = formattedContent.concat('<h2 id="' + headingId + '">', splitContent[i + 1])
+          //     }
+          //   }
+          // } else {
+          //   formattedContent = formattedContent.concat(block.content)
+          // }
 
-          let formattedContentH3 = ''
-          if (formattedContent.split('<h3>').length > 1) {
-            let splitContent = formattedContent.split('<h3>')
-            for (let i = 0; i < splitContent.length; i++) {
-              if (splitContent[i].split('</h3>').length > 1) {
-                let headingId = splitContent[i].split('</h3>')[0].replace(/<\/?[^>]+(>|$)/g, "").replaceAll(' ', '-').toLowerCase().trim()
-                formattedContentH3 = formattedContentH3.concat('<h3 id="' + headingId + '">', splitContent[i].split('</h3>')[0], '</h3>', splitContent[i].split('</h3>')[1])
-              } else {
-                formattedContentH3 = formattedContentH3.concat(splitContent[i])
-              }
-            }
-          } else {
-            formattedContentH3 = formattedContentH3.concat(formattedContent)
-          }
+          // let formattedContentH3 = ''
+          // if (formattedContent.split('<h3>').length > 1) {
+          //   let splitContent = formattedContent.split('<h3>')
+          //   for (let i = 0; i < splitContent.length; i++) {
+          //     if (splitContent[i].split('</h3>').length > 1) {
+          //       let headingId = splitContent[i].split('</h3>')[0].replace(/<\/?[^>]+(>|$)/g, "").replaceAll(' ', '-').toLowerCase().trim()
+          //       formattedContentH3 = formattedContentH3.concat('<h3 id="' + headingId + '">', splitContent[i].split('</h3>')[0], '</h3>', splitContent[i].split('</h3>')[1])
+          //     } else {
+          //       formattedContentH3 = formattedContentH3.concat(splitContent[i])
+          //     }
+          //   }
+          // } else {
+          //   formattedContentH3 = formattedContentH3.concat(formattedContent)
+          // }
 
           return (
-            <BlogContent content={formattedContentH3} />
+            <BlogContent content={block.content} />
           )
         }
 
