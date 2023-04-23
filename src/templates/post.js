@@ -37,6 +37,12 @@ const WpPostTemplate = ({ props, data }) => {
     featuredImageAlt = wpPost.title
   }
 
+  let metaDescription = wpPost.seo.metaDesc
+  if (metaDescription === "") {
+    metaDescription = acfData.blogShortDescription
+  }
+
+
   const publishDate = wpPost.date.split('T')[0];
   const updateDate = wpPost.modified.split('T')[0];
 
@@ -78,12 +84,12 @@ const WpPostTemplate = ({ props, data }) => {
     <Layout>
 
       <Helmet>
-        <title>{wpPost.title} | Fiddle & Thorn</title>
-        <meta name="description" content={acfData.blogShortDescription} />
+        <title>{wpPost.seo.title} | Fiddle & Thorn</title>
+        <meta name="description" content={metaDescription} />
         <meta property="og:title" content={wpPost.title + " | Fiddle & Thorn"} />
         <meta property="og:site_name" content="Fiddle & Thorn" />
         <meta property="og:url" content={"https://fiddleandthorn.com" + wpPost.uri} />
-        <meta property="og:description" content={acfData.blogShortDescription} />
+        <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="article" />
         <meta property="og:image" content={acfData.blogMainImage.sourceUrl} />
 
@@ -91,7 +97,7 @@ const WpPostTemplate = ({ props, data }) => {
         <meta property="twitter:domain" content="fiddleandthorn.com" />
         <meta property="twitter:url" content={"https://fiddleandthorn.com" + wpPost.uri} />
         <meta name="twitter:title" content={wpPost.title + " | Fiddle & Thorn"} />
-        <meta name="twitter:description" content={acfData.blogShortDescription} />
+        <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={acfData.blogMainImage.sourceUrl} />
       </Helmet>
 
@@ -486,6 +492,10 @@ export const query = graphql`
       slug
       date
       modified
+      seo {
+        metaDesc
+        title
+      }
       author {
         node {
           name
