@@ -52,7 +52,7 @@ const SubscribeModal = () => {
               <p className="h3">Take our houseplant survey!</p>
               <p className="text-muted">Quickly respond to our 30 second houseplant survey and get 75% off our <a style={{ "color": '#e2ac23', "font-weight": "bold"}} target="_blank" href="https://fiddleandthorn.gumroad.com/l/houseplant-care-ebook">Complete Houseplant Care eBook!</a></p>
 
-              <a class="button btn btn-block mt-4" style={{ "font-weight": "bold", "display": "block", "margin-top": "2rem" }}  href="https://forms.gle/h18A6b4q3ebpHVnB7" target="_blank">
+              <a class="button btn btn-block mt-4" style={{ "font-weight": "bold", "display": "block", "margin-top": "2rem" }} href="https://forms.gle/4JDwNkDw6mL64mqCA" target="_blank">
                 Take the Survey
               </a>
               
